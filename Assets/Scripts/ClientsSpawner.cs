@@ -13,6 +13,8 @@ public class ClientsSpawner : MonoBehaviour
 
     private void Update()
     {
+        if (QueueOfClients.IsFull()) return;
+        
         _timer.Set(Config.ClientsSpawnDelay, SpawnClient);
     }
 
