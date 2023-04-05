@@ -4,19 +4,22 @@ using System.Linq;
 
 public static class QueueOfClients
 {
-    private static readonly Queue<Client> Clients = new(Config.MaxQueueOfClientsLength);
+    private static readonly Queue<ClientView> Clients = new(Config.MaxQueueOfClientsLength);
     
-    public static void Enqueue(Client client)
+    public static event Action StartedMoving;
+    
+    public static void Enqueue(ClientView client)
     {
         Clients.Enqueue(client);
     }
 
-    public static Client Dequeue()
+    public static ClientView Dequeue()
     {
+        StartedMoving?.Invoke();
         return Clients.Dequeue();
     }
 
-    public static Client TryBack()
+    public static ClientView TryBack()
     {
         try
         {
@@ -31,5 +34,10 @@ public static class QueueOfClients
     public static bool IsFull()
     {
         return Clients.Count >= Config.MaxQueueOfClientsLength;
+    }
+
+    public static ClientView Peek()
+    {
+        return Clients.Peek();
     }
 }

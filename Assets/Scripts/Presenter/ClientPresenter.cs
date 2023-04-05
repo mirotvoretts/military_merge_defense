@@ -1,25 +1,61 @@
 using UnityEngine;
 
-public class ClientPresenter : MonoBehaviour
+public class ClientPresenter
 {
-    [SerializeField] private GameObject _shop;
+    private readonly Client _model;
+    private readonly ClientView _view;
+    private readonly Transform _shop;
+    
+    private ClientView _localLastClientInQueue;
 
-    private Client _model;
-    private bool _movementIsFinished;
-        
-    private void Awake()
+    public bool QueueHasStopped { get; private set; }
+    
+    private void OnReachedEndOfQueue() => QueueHasStopped = true;
+    private void OnQueueStartedMoving() => QueueHasStopped = false;
+
+    public ClientPresenter(ClientView view, Transform shop)
     {
-        _model = new Client(transform, _shop.transform);
-        
-        _model.ReachedEndOfQueue += FinishMovement;
+        _model = new Client();
+        _view = view;
+        _shop = shop;
     }
 
-    private void Update()
+    public void Enable()
     {
-        if (_movementIsFinished) return;
+        _model.ReachedEndOfQueue += OnReachedEndOfQueue;
+        QueueOfClients.StartedMoving += OnQueueStartedMoving;
+
+        _localLastClientInQueue = QueueOfClients.TryBack();
         
-        _model.Update(Time.deltaTime);
+        QueueUp();
     }
 
-    private void FinishMovement() => _movementIsFinished = true;
+    private void QueueUp()
+    {
+        QueueOfClients.Enqueue(_view);
+    }
+
+    private void TryLeaveQueue()
+    {
+        if (QueueOfClients.Peek() == _view)
+            QueueOfClients.Dequeue();
+    }
+    
+    public void MoveToEndOfQueue()
+    {
+        var targetPosition = _localLastClientInQueue == null ? _shop.position : _localLastClientInQueue.transform.position;
+
+        if (_view.transform.position.y <= targetPosition.y - 1.5f)
+            _view.transform.Translate(Vector3.up * Config.ClientSpeed * Time.deltaTime);
+        else
+            _model.InvokeOnReachedEndOfQueue();
+    }
+
+    public void Disable()
+    {
+        _model.ReachedEndOfQueue -= OnReachedEndOfQueue;
+        QueueOfClients.StartedMoving -= OnQueueStartedMoving;
+        
+        TryLeaveQueue();
+    }
 }

@@ -1,42 +1,26 @@
 using System;
-using UnityEngine;
+using Random = UnityEngine.Random;
 
-public class Client : Transformable
+public class Client
 {
-    private readonly Transform _shop;
-    
     public event Action ReachedEndOfQueue;
 
-    public Client(Transform transform, Transform shop) : base(transform)
+    public Materials.Material RequestedResource { get; }
+    
+    public Client()
     {
-        _shop = shop;
-        ReachedEndOfQueue += QueueUp;
+        RequestedResource = GetRandomMaterial();
     }
 
-    public override void Update(float deltaTime)
+    private Materials.Material GetRandomMaterial()
     {
-        MoveToEndOfQueue(deltaTime);
+        var resourceIndex = Random.Range(0, Materials.Sequence.Count - 1);
+
+        return Materials.Sequence[resourceIndex];
     }
 
-    private void QueueUp()
+    public void InvokeOnReachedEndOfQueue()
     {
-        QueueOfClients.Enqueue(this);
-    }
-
-    private void LeaveQueue()
-    {
-        QueueOfClients.Dequeue();
-    }
-
-    private void MoveToEndOfQueue(float deltaTime)
-    {
-        var lastClientInQueue = QueueOfClients.TryBack();
-
-        var targetPosition = lastClientInQueue == null ? _shop.position : lastClientInQueue.Transform.position;
-
-        if (Transform.position.y <= targetPosition.y - 1.5f)
-            Transform.Translate(Vector3.up * Config.ClientSpeed * deltaTime);
-        else
-            ReachedEndOfQueue?.Invoke();
+        ReachedEndOfQueue?.Invoke();
     }
 }
