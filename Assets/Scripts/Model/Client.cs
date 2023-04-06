@@ -4,19 +4,22 @@ using Random = UnityEngine.Random;
 public class Client
 {
     public event Action ReachedEndOfQueue;
+    public ProductsData.Product RequestedProduct { get; }
 
-    public Materials.Material RequestedResource { get; }
+    private readonly ProductsData _productsData;
     
-    public Client()
+    public Client(ProductsData productsData)
     {
-        RequestedResource = GetRandomMaterial();
+        _productsData = productsData;
+        RequestedProduct = GetRandomProduct();
     }
 
-    private Materials.Material GetRandomMaterial()
+    private ProductsData.Product GetRandomProduct()
     {
-        var resourceIndex = Random.Range(0, Materials.Sequence.Count - 1);
+        var products = _productsData.GetProducts();
+        var productIndex = Random.Range(0, products.Count);
 
-        return Materials.Sequence[resourceIndex];
+        return _productsData.GetProducts()[productIndex];
     }
 
     public void InvokeOnReachedEndOfQueue()

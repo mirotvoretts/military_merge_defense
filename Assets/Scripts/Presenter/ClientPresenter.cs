@@ -1,21 +1,24 @@
 using UnityEngine;
 
-public class ClientPresenter
+public class ClientPresenter : IPresenter
 {
     private readonly Client _model;
     private readonly ClientView _view;
     private readonly Transform _shop;
-    
+    private readonly Shop _shopModel;
+
     private ClientView _localLastClientInQueue;
 
     public bool QueueHasStopped { get; private set; }
     
     private void OnReachedEndOfQueue() => QueueHasStopped = true;
     private void OnQueueStartedMoving() => QueueHasStopped = false;
+    
+    public ProductsData.Product GetRequestedProduct() => _model.RequestedProduct;
 
-    public ClientPresenter(ClientView view, Transform shop)
+    public ClientPresenter(ClientView view, Transform shop, ProductsData productsData)
     {
-        _model = new Client();
+        _model = new Client(productsData);
         _view = view;
         _shop = shop;
     }
@@ -24,6 +27,7 @@ public class ClientPresenter
     {
         _model.ReachedEndOfQueue += OnReachedEndOfQueue;
         QueueOfClients.StartedMoving += OnQueueStartedMoving;
+        //_shopModel.GaveClientProduct += TryLeaveQueue;
 
         _localLastClientInQueue = QueueOfClients.TryBack();
         
@@ -55,7 +59,6 @@ public class ClientPresenter
     {
         _model.ReachedEndOfQueue -= OnReachedEndOfQueue;
         QueueOfClients.StartedMoving -= OnQueueStartedMoving;
-        
-        TryLeaveQueue();
+        //_shopModel.GaveClientProduct -= TryLeaveQueue;
     }
 }
