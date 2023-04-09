@@ -5,20 +5,22 @@ using UnityEngine.UI;
 
 public class PlaceActions : MonoBehaviour
 {
-    [SerializeField] BoolButton buildButton;
-    //[SerializeField] BoolButton mergeButton;
-    [SerializeField] BoolButton destroyButton;
+    [SerializeField] private MergeSystem _mergeSystem;
+    [SerializeField] private BoolButton _buildButton;
+    [SerializeField] private BoolButton _mergeButton;
+    [SerializeField] private BoolButton _destroyButton;
 
     private TowerPlace _currentPlace;
     
     private void Start()
     {
-        foreach(TowerPlace towerPlace in TowersContainer.towerPlaces)
+        foreach(TowerPlace towerPlace in MergeSystem.towerPlaces)
         {
             towerPlace.OnClicked += SelectPlace;
         }
-        buildButton.OnClicked.AddListener(BuildTower);
-        destroyButton.OnClicked.AddListener(DestroyTower);
+        _buildButton.OnClicked.AddListener(BuildTower);
+        _mergeButton.OnClicked.AddListener(MergeTower);
+        _destroyButton.OnClicked.AddListener(DestroyTower);
     }
 
     private void SelectPlace(IClickable clickable)
@@ -27,35 +29,37 @@ public class PlaceActions : MonoBehaviour
         {
             _currentPlace = towerPlace;
             bool hasTower = towerPlace.Tower != null;
-            buildButton.IsUsable = !hasTower;
-            //mergeButton.IsUsable = !hasTower;
-            destroyButton.IsUsable = hasTower;
+            _buildButton.IsUsable = !hasTower;
+            _mergeButton.IsUsable = true;
+            _destroyButton.IsUsable = hasTower;
         }
-        Debug.Log(buildButton.IsUsable);
-    }
-
-    private void UpdateButtons()
-    {
-
     }
 
     private void BuildTower()
     {
-        if (buildButton.IsUsable)
+        if (_buildButton.IsUsable)
         {
             _currentPlace.BuildTower();
-            buildButton.IsUsable = false;
-            destroyButton.IsUsable = true;
+            _buildButton.IsUsable = false;
+            _destroyButton.IsUsable = true;
         }
     }
 
     private void DestroyTower()
     {
-        if (destroyButton.IsUsable)
+        if (_destroyButton.IsUsable)
         {
             _currentPlace.DestroyTower();
-            destroyButton.IsUsable = false;
-            buildButton.IsUsable = true;
+            _destroyButton.IsUsable = false;
+            _buildButton.IsUsable = true;
+        }
+    }
+
+    private void MergeTower()
+    {
+        if (_mergeButton.IsUsable)
+        {
+            _mergeSystem.TryMerge(_currentPlace);
         }
     }
 }

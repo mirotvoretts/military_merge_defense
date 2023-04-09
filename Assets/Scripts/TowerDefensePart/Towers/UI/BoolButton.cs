@@ -11,7 +11,7 @@ public class BoolButton : MonoBehaviour
     [SerializeField] private Sprite _activePicture, _disablePicture;
 
     private Button _button;
-    private bool _isUsable;
+    private bool _isUsable = false;
 
     public Action OnValueSet;
     public Button.ButtonClickedEvent OnClicked;
@@ -22,7 +22,6 @@ public class BoolButton : MonoBehaviour
         set
         {
             _isUsable = value;
-            Debug.Log("Меняем на " + value);
             OnValueSet?.Invoke();
         }
     }

@@ -14,7 +14,7 @@ public class TowerPlace : MonoBehaviour, IClickable
 
     private void Awake()
     {
-        TowersContainer.towerPlaces.Add(this);
+        MergeSystem.towerPlaces.Add(this);
     }
 
     private void OnMouseDown()
@@ -29,9 +29,19 @@ public class TowerPlace : MonoBehaviour, IClickable
         _tower = Instantiate(towerPrefab, position: transform.position, Quaternion.Euler(0,0,0));
     }
 
+    public void BuildTower(BaseTower prefab)
+    {
+        _tower = Instantiate(prefab, position: transform.position, Quaternion.Euler(0,0,0));
+    }
+
     public void DestroyTower()
     {
         Destroy(_tower.gameObject);
         _tower = null;
+    }
+
+    public bool CompareByTower(TowerPlace place)
+    { 
+        return Tower.GetType() == place.Tower.GetType() && (Tower.Level == place.Tower.Level);
     }
 }

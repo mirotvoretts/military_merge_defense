@@ -7,6 +7,9 @@ public abstract class BaseTower : MonoBehaviour
 {
     [SerializeField] protected float BasicFireRate, BasicDamage;
     [SerializeField] protected DefaultGun Gun;
+    [SerializeField] protected uint level;
+    public uint Level { get => level; }
+
     protected float FireRate, Damage;
     protected CircleCollider2D RangeCollider;
     protected Vector3 BasicRangeScale;

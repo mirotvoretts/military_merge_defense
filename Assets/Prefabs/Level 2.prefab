@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7490648409673244114}
   - component: {fileID: 7490648409673244113}
   m_Layer: 0
-  m_Name: DefaultTower
+  m_Name: Level 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -102,7 +102,7 @@ MonoBehaviour:
   BasicFireRate: 0
   BasicDamage: 0
   Gun: {fileID: 7490648411121951864}
-  level: 1
+  level: 2
 --- !u!58 &7490648409673244113
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -194,7 +194,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: b8269a37262ba884ca7a5ea2f2e599a3, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.3018868, g: 0.22926308, b: 0.22926308, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
