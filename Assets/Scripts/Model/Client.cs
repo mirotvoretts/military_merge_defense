@@ -4,6 +4,11 @@ using Random = UnityEngine.Random;
 public class Client
 {
     public event Action ReachedEndOfQueue;
+    public void InvokeOnReachedEndOfQueue() => ReachedEndOfQueue?.Invoke();
+    
+    public event Action ProductReceived;
+    public void InvokeOnProductReceived() => ProductReceived?.Invoke();
+
     public ProductsData.Product RequestedProduct { get; }
 
     private readonly ProductsData _productsData;
@@ -20,10 +25,5 @@ public class Client
         var productIndex = Random.Range(0, products.Count);
 
         return _productsData.GetProducts()[productIndex];
-    }
-
-    public void InvokeOnReachedEndOfQueue()
-    {
-        ReachedEndOfQueue?.Invoke();
     }
 }

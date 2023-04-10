@@ -8,37 +8,38 @@ public class ClientView : MonoBehaviour, IPointerClickHandler
     [SerializeField] private Transform _shop;
     [SerializeField] private TextMeshProUGUI _requestedProductLabel;
     [SerializeField] private ClientInfoUIView _infoMenu;
+
+    public ClientPresenter Presenter { get; private set; }
     
-    private ClientPresenter _presenter;
+    public void OnProductReceived() => Presenter.InvokeOnProductReceived();
 
     private void Awake()
     {
-        _presenter = new ClientPresenter(this, _shop, _productsData);
-        _presenter.Enable();
+        Presenter = new ClientPresenter(this, _shop, _productsData);
+        Presenter.Enable();
 
         UpdateInfo();
     }
 
     private void Update()
     {
-        if (_presenter.QueueHasStopped) return;
-        
-        _presenter.MoveToEndOfQueue();
+        if (!Presenter.FinishedMoving) Presenter.MoveToEndOfQueue();
+        if (Presenter.ProductReceived) Presenter.MoveOutOfQueue();
     }
     
     private void UpdateInfo()
     {
-        _requestedProductLabel.text = _presenter.GetRequestedProduct().Name;
+        _requestedProductLabel.text = Presenter.GetRequestedProduct().Name;
     }
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        if (eventData.pointerId == -1)
+        if (eventData.pointerId == Config.Mouse1Id && Presenter.FinishedMoving && this == QueueOfClients.Peek())
             _infoMenu.Show();
     }
 
     private void OnDestroy()
     {
-        _presenter.Disable();
+        Presenter.Disable();
     }
 }

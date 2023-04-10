@@ -1,15 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 public class Shop
 {
     public List<Materials.Material> Inventory { get; }
     
     private static Shop _instance;
-    
-    public event Action GaveClientProduct;
-    public void InvokeOnGaveClientProduct() => GaveClientProduct?.Invoke();
-    
+
     private Shop()
     {
         Inventory = new List<Materials.Material>();

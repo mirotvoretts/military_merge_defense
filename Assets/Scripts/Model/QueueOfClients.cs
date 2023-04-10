@@ -38,6 +38,13 @@ public static class QueueOfClients
 
     public static ClientView Peek()
     {
-        return Clients.Peek();
+        try
+        {
+            return Clients.Peek();
+        }
+        catch (InvalidOperationException)
+        {
+            return null;
+        }
     }
 }

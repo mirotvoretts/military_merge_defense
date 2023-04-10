@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
 public class ShopPresenter : IPresenter
 {
@@ -6,22 +7,19 @@ public class ShopPresenter : IPresenter
     private readonly ShopView _view;
     
     private readonly EnemyFactory _enemyFactory;
-
-    public ShopPresenter(ShopView view)
+    
+    public List<Materials.Material> Inventory() => _model.Inventory;
+    
+    public ShopPresenter(ShopView view, EnemyFactory enemyFactory)
     {
         _model = Shop.GetInstance();
         _view = view;
-        _enemyFactory = new EnemyFactory();
+        _enemyFactory = enemyFactory;
     }
     
     public void Enable()
     {
         _enemyFactory.EnemyDied += OnEnemyDied;
-    }
-
-    private void GaveClientProduct()
-    {
-        _model.InvokeOnGaveClientProduct();
     }
 
     private void OnEnemyDied()
@@ -31,7 +29,7 @@ public class ShopPresenter : IPresenter
 
     private Materials.Material GetRandomMaterial()
     {
-        var materialIndex = Random.Range(0, Materials.Sequence.Count - 1);
+        var materialIndex = Random.Range(0, Materials.Sequence.Count);
         
         return Materials.Sequence[materialIndex];
     }
