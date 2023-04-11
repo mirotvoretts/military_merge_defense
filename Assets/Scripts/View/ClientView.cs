@@ -12,6 +12,7 @@ public class ClientView : MonoBehaviour, IPointerClickHandler
     public ClientPresenter Presenter { get; private set; }
     
     public void OnProductReceived() => Presenter.InvokeOnProductReceived();
+    public Transform Shop => _shop;
 
     private void Awake()
     {
@@ -29,7 +30,7 @@ public class ClientView : MonoBehaviour, IPointerClickHandler
     
     private void UpdateInfo()
     {
-        _requestedProductLabel.text = Presenter.GetRequestedProduct().Name;
+        _requestedProductLabel.text = Presenter.RequestedProduct.Name;
     }
 
     public void OnPointerClick(PointerEventData eventData)

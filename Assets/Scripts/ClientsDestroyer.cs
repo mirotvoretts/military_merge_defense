@@ -2,9 +2,9 @@ using UnityEngine;
 
 public class ClientsDestroyer : MonoBehaviour
 {
-    private void OnTriggerEnter2D(Collider2D col)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (col.TryGetComponent<ClientView>(out _))
-            Destroy(col.gameObject);
+        if (collision.TryGetComponent<ClientView>(out _))
+            Destroy(collision.gameObject);
     }
 }

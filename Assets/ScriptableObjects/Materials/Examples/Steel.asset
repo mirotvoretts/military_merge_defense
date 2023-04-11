@@ -9,7 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27aebefbceb316d48b145137d014996d, type: 3}
-  m_Name: Products Data
-  m_EditorClassIdentifier: 
-  _products: []
+  m_Script: {fileID: 0}
+  m_Name: Steel
+  m_EditorClassIdentifier: Assembly-CSharp::MaterialsData/Material
+  _name: 
+  _icon: {fileID: 0}

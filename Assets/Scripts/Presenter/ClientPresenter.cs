@@ -16,7 +16,7 @@ public class ClientPresenter : IPresenter
     private void OnQueueStartedMoving() => FinishedMoving = false;
     private void OnProductReceived() => ProductReceived = true;
     
-    public ProductsData.Product GetRequestedProduct() => _model.RequestedProduct;
+    public ProductsData.Product RequestedProduct => _model.RequestedProduct;
     
     public void InvokeOnProductReceived() => _model.InvokeOnProductReceived();
 

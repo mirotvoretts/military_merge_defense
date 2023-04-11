@@ -6,8 +6,9 @@ public class ClientInfoUIView : MonoBehaviour
 {
     [SerializeField] private Button _closeButton;
     [SerializeField] private Button _giveProductButton;
-
+    
     [SerializeField] private ClientView _client;
+    [SerializeField] private ShopView _shop;
 
     public void Show()
     {
@@ -30,7 +31,21 @@ public class ClientInfoUIView : MonoBehaviour
 
     private void OnGiveProduct()
     {
-        _client.OnProductReceived();
-        OnCloseClick();
+        var requestedProduct = _client.Presenter.RequestedProduct;
+
+        Debug.Log(_shop);
+        Debug.Log(_shop.Inventory);
+        
+        if (requestedProduct.ContainsIn(_shop.Inventory))
+        {
+            _client.OnProductReceived();
+            _shop.Inventory.Remove(requestedProduct);
+            
+            OnCloseClick();
+        }
+        else
+        {
+            Debug.Log("Невозможно отдать то, чего нет!");
+        }
     }
 }

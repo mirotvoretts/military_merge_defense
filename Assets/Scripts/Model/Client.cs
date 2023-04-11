@@ -21,9 +21,9 @@ public class Client
 
     private ProductsData.Product GetRandomProduct()
     {
-        var products = _productsData.GetProducts();
+        var products = _productsData.Sequence;
         var productIndex = Random.Range(0, products.Count);
 
-        return _productsData.GetProducts()[productIndex];
+        return _productsData.Sequence[productIndex] as ProductsData.Product;
     }
 }
