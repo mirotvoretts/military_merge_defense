@@ -12,4 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55d1d6e13de645a7a4b6ecb5ee50b445, type: 3}
   m_Name: Materials Data
   m_EditorClassIdentifier: 
-  _sequence: []
+  _sequence:
+  - {fileID: 11400000, guid: 76147ef8101035b4fa748d66889d97b8, type: 2}
+  - {fileID: 11400000, guid: 04fff60882451554db236abce5b99ec7, type: 2}
+  - {fileID: 11400000, guid: 2399160f0ce68bf42b03f3b89c996032, type: 2}

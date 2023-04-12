@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27aebefbceb316d48b145137d014996d, type: 3}
   m_Name: Products Data
   m_EditorClassIdentifier: 
-  _products:
-  - {fileID: 11400000, guid: 9a2634b8a7e5c8540a152eef585d7f13, type: 2}
-  - {fileID: 11400000, guid: 805789044f6508b4e8079e51dc847ae8, type: 2}
+  _sequence:
   - {fileID: 11400000, guid: a365a690d21bbe54283e1a6773bcefbb, type: 2}
+  - {fileID: 11400000, guid: 805789044f6508b4e8079e51dc847ae8, type: 2}
+  - {fileID: 11400000, guid: 9a2634b8a7e5c8540a152eef585d7f13, type: 2}

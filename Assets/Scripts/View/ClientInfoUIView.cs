@@ -8,7 +8,13 @@ public class ClientInfoUIView : MonoBehaviour
     [SerializeField] private Button _giveProductButton;
     
     [SerializeField] private ClientView _client;
-    [SerializeField] private ShopView _shop;
+    
+    private ShopView _shop;
+
+    private void Awake()
+    {
+        _shop = ShopView.Instance;
+    }
 
     public void Show()
     {
@@ -33,14 +39,11 @@ public class ClientInfoUIView : MonoBehaviour
     {
         var requestedProduct = _client.Presenter.RequestedProduct;
 
-        Debug.Log(_shop);
-        Debug.Log(_shop.Inventory);
-        
         if (requestedProduct.ContainsIn(_shop.Inventory))
         {
+            ShopView.Instance.Inventory.Remove(requestedProduct);
             _client.OnProductReceived();
-            _shop.Inventory.Remove(requestedProduct);
-            
+
             OnCloseClick();
         }
         else

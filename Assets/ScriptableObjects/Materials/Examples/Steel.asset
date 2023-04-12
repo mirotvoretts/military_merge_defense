@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: Steel
   m_EditorClassIdentifier: Assembly-CSharp::MaterialsData/Material
-  _name: 
+  _name: "\u0421\u0442\u0430\u043B\u044C"
   _icon: {fileID: 0}

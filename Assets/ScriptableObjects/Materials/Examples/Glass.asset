@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: Glass
   m_EditorClassIdentifier: Assembly-CSharp::MaterialsData/Material
-  _name: 
+  _name: "\u0421\u0442\u0435\u043A\u043B\u043E"
   _icon: {fileID: 0}

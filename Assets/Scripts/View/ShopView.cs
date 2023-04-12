@@ -4,6 +4,8 @@ using UnityEngine.EventSystems;
 
 public class ShopView : MonoBehaviour, IPointerClickHandler
 {
+    public static ShopView Instance;
+    
     [SerializeField] private EnemyFactory _enemyFactory;
     [SerializeField] private MaterialsData _materialsData;
     [SerializeField] private ProductsData _productsData;
@@ -15,8 +17,15 @@ public class ShopView : MonoBehaviour, IPointerClickHandler
     
     public List<Items.Item> Inventory => _presenter.Inventory;
     
+    private ShopView() { }
+    
     private void Awake()
     {
+        if (Instance != null && Instance != this)
+            Destroy(gameObject);
+        else
+            Instance = this;
+        
         _presenter = new ShopPresenter(this, _enemyFactory);
         _presenter.Enable();
     }

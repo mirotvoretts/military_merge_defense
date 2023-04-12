@@ -24,6 +24,6 @@ public class Client
         var products = _productsData.Sequence;
         var productIndex = Random.Range(0, products.Count);
 
-        return _productsData.Sequence[productIndex] as ProductsData.Product;
+        return (ProductsData.Product)_productsData.Sequence[productIndex];
     }
 }

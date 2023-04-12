@@ -12,6 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: Weapon
   m_EditorClassIdentifier: Assembly-CSharp::ProductsData/Product
-  _name: AK-47
-  _price: 0
+  _name: "\u0410\u041A-47"
   _icon: {fileID: 0}
+  _price: 0
+  _craftReceipt:
+  - {fileID: 11400000, guid: 2399160f0ce68bf42b03f3b89c996032, type: 2}
+  - {fileID: 11400000, guid: 04fff60882451554db236abce5b99ec7, type: 2}

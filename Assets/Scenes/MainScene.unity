@@ -381,6 +381,7 @@ GameObject:
   - component: {fileID: 368699462}
   - component: {fileID: 368699461}
   - component: {fileID: 368699460}
+  - component: {fileID: 368699463}
   m_Layer: 5
   m_Name: CraftProductButton
   m_TagString: Untagged
@@ -452,7 +453,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 368699461}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 368699463}
+        m_TargetAssemblyTypeName: CraftButton, Assembly-CSharp
+        m_MethodName: TryCraftAnyProduct
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &368699461
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -491,6 +504,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 368699458}
   m_CullTransparentMesh: 1
+--- !u!114 &368699463
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 368699458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03db611a09468f046b32fe63c56758a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _shop: {fileID: 1845807368}
 --- !u!1 &548200259
 GameObject:
   m_ObjectHideFlags: 0
@@ -568,8 +594,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 664776635}
-  - component: {fileID: 664776634}
   - component: {fileID: 664776633}
+  - component: {fileID: 664776636}
   m_Layer: 0
   m_Name: ClientsDestroyer
   m_TagString: Untagged
@@ -589,7 +615,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc0a6f0bf5363e94c91e8f0f00f251d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!61 &664776634
+--- !u!4 &664776635
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 664776632}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -13.58, y: 0.060429275, z: -2.664088}
+  m_LocalScale: {x: 0.7703897, y: 11.463, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &664776636
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -615,21 +656,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!4 &664776635
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 664776632}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12.18, y: 0.060429275, z: -2.664088}
-  m_LocalScale: {x: 1, y: 11.463, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &703622432
 GameObject:
   m_ObjectHideFlags: 0
@@ -1113,6 +1139,17 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1845807368 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2876909101401173275, guid: 0748f6de1f4452e4abbc67ec60159a44, type: 3}
+  m_PrefabInstance: {fileID: 2024648925}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1845807362}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5099ac5388ed4debba1ab1cf69fb681a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2024648925
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1128,6 +1165,14 @@ PrefabInstance:
       propertyPath: _enemyFactory
       value: 
       objectReference: {fileID: 703622434}
+    - target: {fileID: 2876909101401173275, guid: 0748f6de1f4452e4abbc67ec60159a44, type: 3}
+      propertyPath: _productsData
+      value: 
+      objectReference: {fileID: 11400000, guid: 2270b1eaa88e6ff4ea283e8acde64895, type: 2}
+    - target: {fileID: 2876909101401173275, guid: 0748f6de1f4452e4abbc67ec60159a44, type: 3}
+      propertyPath: _materialsData
+      value: 
+      objectReference: {fileID: 11400000, guid: e52cc4159b993f94b88cc980df7056c6, type: 2}
     - target: {fileID: 7767912646924856264, guid: 0748f6de1f4452e4abbc67ec60159a44, type: 3}
       propertyPath: m_Name
       value: Shop
