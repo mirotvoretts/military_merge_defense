@@ -30,7 +30,7 @@ public class PlaceActions : MonoBehaviour
             _currentPlace = towerPlace;
             bool hasTower = towerPlace.Tower != null;
             _buildButton.IsUsable = !hasTower;
-            _mergeButton.IsUsable = true;
+            _mergeButton.IsUsable = _mergeSystem.CheckMergeAbility(_currentPlace);
             _destroyButton.IsUsable = hasTower;
         }
     }
@@ -42,6 +42,7 @@ public class PlaceActions : MonoBehaviour
             _currentPlace.BuildTower();
             _buildButton.IsUsable = false;
             _destroyButton.IsUsable = true;
+            _mergeButton.IsUsable = _mergeSystem.CheckMergeAbility(_currentPlace);
         }
     }
 
@@ -60,6 +61,7 @@ public class PlaceActions : MonoBehaviour
         if (_mergeButton.IsUsable)
         {
             _mergeSystem.TryMerge(_currentPlace);
+            _mergeButton.IsUsable = _mergeSystem.CheckMergeAbility(_currentPlace);
         }
     }
 }

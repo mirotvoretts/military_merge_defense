@@ -99,10 +99,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80084981b87eb8d43a11461bd7819657, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BasicFireRate: 0
-  BasicDamage: 0
-  Gun: {fileID: 7490648411121951864}
-  level: 2
+  BasicFireRate: 1
+  BasicDamage: 2
+  TowerLevel: 2
+  Gun: {fileID: 7490648411121951867}
 --- !u!58 &7490648409673244113
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -129,7 +129,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7490648411121951846}
   - component: {fileID: 7490648411121951865}
-  - component: {fileID: 7490648411121951864}
   m_Layer: 0
   m_Name: Gun
   m_TagString: Untagged
@@ -204,15 +203,3 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &7490648411121951864
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7490648411121951867}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78f9719f1bd69904386f38fcedbae4e8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

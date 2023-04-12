@@ -4,4 +4,9 @@ using UnityEngine;
 
 public class DefaultEnemy : BaseEnemy
 {
+    protected override void UpdateStats()
+    {
+        Speed = BasicSpeed;
+        Health = BasicHealth;
+    }
 }

@@ -2,19 +2,32 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class BaseEnemy : MonoBehaviour
+public abstract class BaseEnemy : MonoBehaviour
 {
-    [SerializeField] protected float Speed = 1f;
+    [SerializeField] protected Transform Body;
+    [SerializeField] protected Image HealthBar;
+
+
+    protected const float MaxSpeed = 25;
+    [SerializeField] protected float BasicSpeed = 1f;
+    [SerializeField] protected float BasicHealth;
+
+    protected float Speed;
+    protected float Health;
     protected RouteMark[] RouteMarks;
     public IEnumerator RouteMovement;
     private Vector3 _movementDirection;
+
+    public Action<BaseEnemy> OnDied;
 
     public void Init(RouteMark[] routeMarks)
     {
         RouteMarks = routeMarks;
         RouteMovement = MoveOnRoute();
         RouteMovement.MoveNext();
+        UpdateStats();
         StartCoroutine("Movement");
     }
 
@@ -22,7 +35,7 @@ public class BaseEnemy : MonoBehaviour
     {
         foreach(var mark in RouteMarks)
         {
-            transform.LookAt2D(mark.transform);
+            Body.LookAt2D(mark.transform);
             _movementDirection = (mark.transform.position - transform.position).normalized;
             yield return null;
         }
@@ -53,4 +66,16 @@ public class BaseEnemy : MonoBehaviour
             tower.RemoveTargetEnemy(this);
         }
     }
+
+    public virtual void TakeDamage(float damage)
+    {
+        Health -= damage;
+        HealthBar.fillAmount = Health / BasicHealth;
+        if (Health <= 0)
+        {
+            OnDied?.Invoke(this);
+            Destroy(gameObject);
+        }
+    }
+    protected abstract void UpdateStats();
 }

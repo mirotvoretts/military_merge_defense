@@ -6,15 +6,16 @@ using UnityEngine;
 public abstract class BaseTower : MonoBehaviour
 {
     [SerializeField] protected float BasicFireRate, BasicDamage;
-    [SerializeField] protected DefaultGun Gun;
-    [SerializeField] protected uint level;
-    public uint Level { get => level; }
+    [SerializeField] protected uint TowerLevel;
+    [SerializeField] protected Gun TowerGun;
+    public uint Level { get => TowerLevel; }
 
     protected float FireRate, Damage;
     protected CircleCollider2D RangeCollider;
     protected Vector3 BasicRangeScale;
     protected List<BaseEnemy> Enemies;
     protected BaseEnemy CurrentEnemy;
+
     protected Action OnEnemyNoticed;
     protected Action OnEnemyLost;
     protected Action OnCurrentEnemyChoosed;
@@ -68,7 +69,7 @@ public abstract class BaseTower : MonoBehaviour
         while(true) 
         {
             if(CurrentEnemy != null)
-                Gun.transform.LookAt2D(CurrentEnemy.transform);
+                TowerGun.Body.LookAt2D(CurrentEnemy.transform);
             yield return new WaitForSeconds(0.01f);
         }
     }

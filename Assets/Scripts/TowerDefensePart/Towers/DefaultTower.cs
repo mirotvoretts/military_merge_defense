@@ -12,8 +12,9 @@ public class DefaultTower : BaseTower
             float reload = 0;
             if(CurrentEnemy != null)
             {
-                Debug.Log("Ïèó");
+                CurrentEnemy.TakeDamage(BasicDamage);
                 reload = BasicFireRate;
+                TowerGun.GunAnimator.SetTrigger("OnFire");
             }
             yield return new WaitForSeconds(reload);
         }

@@ -1366,7 +1366,7 @@ MonoBehaviour:
   - {fileID: 39264529}
   - {fileID: 1537854696}
   - {fileID: 1122469605}
-  enemyPrefab: {fileID: 5645073049704122524, guid: 13d689fce7fde9d4d96cf2586698819d, type: 3}
+  enemyPrefab: {fileID: 2808555306609376955, guid: eb6936a43412d804c8d8946cdbc2cc34, type: 3}
 --- !u!1001 &417340208
 PrefabInstance:
   m_ObjectHideFlags: 0
