@@ -27,7 +27,11 @@ public class PlaceActions : MonoBehaviour
     {
         if(clickable is TowerPlace towerPlace)
         {
+            if(_currentPlace != null)
+                _currentPlace.GetComponent<SpriteRenderer>().color = Color.white;
             _currentPlace = towerPlace;
+
+            _currentPlace.GetComponent<SpriteRenderer>().color = new Color(0,0.8f,0);
             bool hasTower = towerPlace.Tower != null;
             _buildButton.IsUsable = !hasTower;
             _mergeButton.IsUsable = _mergeSystem.CheckMergeAbility(_currentPlace);
