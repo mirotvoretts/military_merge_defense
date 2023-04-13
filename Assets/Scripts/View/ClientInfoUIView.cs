@@ -1,36 +1,33 @@
-﻿using System;
+﻿using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ClientInfoUIView : MonoBehaviour
+public class ClientInfoUIView : UIView
 {
+    [SerializeField] private TextMeshProUGUI _requestedProductLabel;
     [SerializeField] private Button _closeButton;
     [SerializeField] private Button _giveProductButton;
     
     [SerializeField] private ClientView _client;
-    
+
     private ShopView _shop;
 
     private void Awake()
     {
         _shop = ShopView.Instance;
+        
+        _requestedProductLabel.text = _client.Presenter.RequestedProduct.Name;
     }
 
-    public void Show()
+    public override void Show()
     {
-        ResetButtonWith(_closeButton, OnCloseClick);
+        ResetButtonWith(_closeButton, Close);
         ResetButtonWith(_giveProductButton, OnGiveProduct);
         
         gameObject.SetActive(true);
     }
 
-    private void ResetButtonWith(Button button, Action newListener)
-    {
-        button.onClick.RemoveAllListeners();
-        button.onClick.AddListener(() => newListener());
-    }
-
-    private void OnCloseClick()
+    public void Close()
     {
         gameObject.SetActive(false);
     }
@@ -42,9 +39,11 @@ public class ClientInfoUIView : MonoBehaviour
         if (requestedProduct.ContainsIn(_shop.Inventory))
         {
             ShopView.Instance.Inventory.Remove(requestedProduct);
+            
             _client.OnProductReceived();
+            Score.OnSell(requestedProduct);
 
-            OnCloseClick();
+            Close();
         }
         else
         {

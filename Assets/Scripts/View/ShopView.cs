@@ -5,7 +5,8 @@ using UnityEngine.EventSystems;
 public class ShopView : MonoBehaviour, IPointerClickHandler
 {
     public static ShopView Instance;
-    
+
+    [SerializeField] private InventoryInfoUIView _inventoryView;
     [SerializeField] private EnemyFactory _enemyFactory;
     [SerializeField] private MaterialsData _materialsData;
     [SerializeField] private ProductsData _productsData;
@@ -34,7 +35,10 @@ public class ShopView : MonoBehaviour, IPointerClickHandler
     {
         if (eventData.pointerId == Config.Mouse1Id)
         {
-            Debug.Log(_presenter.Inventory[^1].Name);
+            if (_inventoryView.gameObject.activeSelf)
+                _inventoryView.Close();
+            else
+                _inventoryView.Show();
         }
     }
 

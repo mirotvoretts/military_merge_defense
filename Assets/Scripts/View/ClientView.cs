@@ -1,12 +1,10 @@
-﻿using TMPro;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.EventSystems;
 
 public class ClientView : MonoBehaviour, IPointerClickHandler
 {
     [SerializeField] private ProductsData _productsData;
     [SerializeField] private Transform _shop;
-    [SerializeField] private TextMeshProUGUI _requestedProductLabel;
     [SerializeField] private ClientInfoUIView _infoMenu;
 
     public ClientPresenter Presenter { get; private set; }
@@ -18,8 +16,6 @@ public class ClientView : MonoBehaviour, IPointerClickHandler
     {
         Presenter = new ClientPresenter(this, _shop, _productsData);
         Presenter.Enable();
-
-        UpdateInfo();
     }
 
     private void Update()
@@ -27,16 +23,21 @@ public class ClientView : MonoBehaviour, IPointerClickHandler
         if (!Presenter.FinishedMoving) Presenter.MoveToEndOfQueue();
         if (Presenter.ProductReceived) Presenter.MoveOutOfQueue();
     }
-    
-    private void UpdateInfo()
-    {
-        _requestedProductLabel.text = Presenter.RequestedProduct.Name;
-    }
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        if (eventData.pointerId == Config.Mouse1Id && Presenter.FinishedMoving && this == QueueOfClients.Peek())
-            _infoMenu.Show();
+        if (eventData.pointerId == Config.Mouse1Id && Presenter.FinishedMoving && IsFirstInQueue())
+        {
+            if (_infoMenu.gameObject.activeSelf)
+                _infoMenu.Close();
+            else
+                _infoMenu.Show();
+        }
+    }
+
+    private bool IsFirstInQueue()
+    {
+        return this == QueueOfClients.Peek();
     }
 
     private void OnDestroy()
