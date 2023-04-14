@@ -74,7 +74,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 1637771517, guid: 5d20a4057bf63864eb20d398458aee21, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac326aad0ad612c43b263d96ae599323, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  towerPrefab: {fileID: 7490648409673244114, guid: ac00717f1bd189c4682662224167bfd8, type: 3}
+  prefabs: {fileID: 11400000, guid: 309689b4e455ea8478fc5620a5c9c2ff, type: 2}
 --- !u!61 &591454282641652385
 BoxCollider2D:
   m_ObjectHideFlags: 0

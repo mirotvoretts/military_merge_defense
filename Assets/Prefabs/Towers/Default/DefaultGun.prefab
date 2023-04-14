@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2500788499023806036}
   - component: {fileID: 4745403094932367}
   - component: {fileID: 3120844098582290206}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: GunAnimator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95,7 +95,7 @@ Animator:
   m_GameObject: {fileID: 6083462154628967619}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 323579b2bf11488489b16c56270808f6, type: 2}
+  m_Controller: {fileID: 9100000, guid: 8220fe5ca38cf4443a3e28d5e40805f0, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -114,7 +114,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4165144327458159322}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: GunBody
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -147,7 +147,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6652662262534314894}
   - component: {fileID: 3746239987598044464}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: DefaultGun
   m_TagString: Untagged
   m_Icon: {fileID: 0}

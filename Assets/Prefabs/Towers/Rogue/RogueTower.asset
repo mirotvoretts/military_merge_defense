@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83ca8b7545ea32f4e8d225a76abf1adf, type: 3}
+  m_Name: RogueTower
+  m_EditorClassIdentifier: 
+  towers:
+  - {fileID: 1238079200827476882, guid: 44179623b36ab0b47bee0b39f99b5791, type: 3}
+  - {fileID: -2270512503833669565, guid: 7674b0c1536293d46bc10ec6be90484d, type: 3}
+  - {fileID: 2026023358792206969, guid: 5e9281877f3eef9469fdd4a8b8cec8ae, type: 3}
+  - {fileID: 3703645454785946195, guid: 8376e678b61e8cc4cbc8aa45a40bdf7a, type: 3}
+  - {fileID: 1237926822564520642, guid: 0bc5912998c70e84d90462b87bf5f96b, type: 3}

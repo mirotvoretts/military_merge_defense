@@ -10,4 +10,9 @@ public static class UnityExtensions
         float rotateZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg + 90;
         selfTransform.rotation = Quaternion.Euler(0f, 0f, rotateZ);
     }
+
+    public static BaseTower GetRandomValue(this BaseTower[] baseTowers)
+    {
+        return baseTowers[Random.Range(0, baseTowers.Length)];
+    }
 }

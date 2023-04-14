@@ -6,7 +6,7 @@ using UnityEngine;
 public class MergeSystem : MonoBehaviour
 {
     public static List<TowerPlace> towerPlaces = new List<TowerPlace>();
-    [SerializeField] private TowerLevels[] _towerLevels;
+    [SerializeField] private TowerContainer[] _towerLevels;
 
     public bool TryMerge(TowerPlace currentPlace)
     {
@@ -26,7 +26,7 @@ public class MergeSystem : MonoBehaviour
 
     public void MergeTowers(TowerPlace currentPlace, TowerPlace secondaryPlace)
     {
-        TowerLevels towerLevels = _towerLevels.Where(x => x.towers[0].GetType() == currentPlace.Tower.GetType()).First();
+        TowerContainer towerLevels = _towerLevels.Where(x => x.towers[0].GetType() == currentPlace.Tower.GetType()).First();
         currentPlace.DestroyTower();
         currentPlace.BuildTower(towerLevels.towers[secondaryPlace.Tower.Level]);
         secondaryPlace.DestroyTower();
@@ -37,7 +37,7 @@ public class MergeSystem : MonoBehaviour
         if(currentPlace.Tower == null)
             return false;
 
-        TowerLevels towerLevels = _towerLevels.Where(x => x.towers[0].GetType() == currentPlace.Tower.GetType()).First();
+        TowerContainer towerLevels = _towerLevels.Where(x => x.towers[0].GetType() == currentPlace.Tower.GetType()).First();
         if(currentPlace.Tower.Level >= towerLevels.towers.Length)
             return false;
 

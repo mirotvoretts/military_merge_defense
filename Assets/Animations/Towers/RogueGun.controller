@@ -79,7 +79,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Gun
+  m_Name: RogueGun
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: OnFire
@@ -87,7 +87,7 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -121,7 +121,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 6e8cc35346f2fa54280db097c7852b5f, type: 2}
+  m_Motion: {fileID: 7400000, guid: 23e6b1188d1604240bc3f6247dc68f1e, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -148,7 +148,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: bfce4c1f248b3634698673460a6a573f, type: 2}
+  m_Motion: {fileID: 7400000, guid: e1d45197a1c08264a94c030a8940285e, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 

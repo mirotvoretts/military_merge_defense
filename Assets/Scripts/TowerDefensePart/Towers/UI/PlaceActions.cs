@@ -27,16 +27,25 @@ public class PlaceActions : MonoBehaviour
     {
         if(clickable is TowerPlace towerPlace)
         {
-            if(_currentPlace != null)
-                _currentPlace.GetComponent<SpriteRenderer>().color = Color.white;
+            DisableSelection();
             _currentPlace = towerPlace;
 
-            _currentPlace.GetComponent<SpriteRenderer>().color = new Color(0,0.8f,0);
+            _currentPlace.GetComponent<SpriteRenderer>().color = new Color(0, 0.8f, 0);
             bool hasTower = towerPlace.Tower != null;
             _buildButton.IsUsable = !hasTower;
             _mergeButton.IsUsable = _mergeSystem.CheckMergeAbility(_currentPlace);
             _destroyButton.IsUsable = hasTower;
         }
+    }
+
+    public void DisableSelection()
+    {
+        if (_currentPlace != null)
+            _currentPlace.GetComponent<SpriteRenderer>().color = Color.white;
+            _currentPlace = null;
+            _buildButton.IsUsable = false;
+            _destroyButton.IsUsable = false;
+            _mergeButton.IsUsable = false;
     }
 
     private void BuildTower()

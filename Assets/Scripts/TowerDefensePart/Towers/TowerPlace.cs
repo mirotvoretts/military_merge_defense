@@ -7,7 +7,7 @@ using UnityEngine.EventSystems;
 
 public class TowerPlace : MonoBehaviour, IClickable
 {
-    [SerializeField] BaseTower towerPrefab;
+    [SerializeField] TowerContainer prefabs;
     private BaseTower _tower;
     public BaseTower Tower { get => _tower; }
     public Action<IClickable> OnClicked { get; set; }
@@ -26,7 +26,7 @@ public class TowerPlace : MonoBehaviour, IClickable
 
     public void BuildTower()
     {
-        _tower = Instantiate(towerPrefab, position: transform.position, Quaternion.Euler(0,0,0));
+        _tower = Instantiate(prefabs.towers.GetRandomValue(), position: transform.position, Quaternion.Euler(0,0,0));
     }
 
     public void BuildTower(BaseTower prefab)
