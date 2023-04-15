@@ -56,7 +56,7 @@ public class ClientPresenter : IPresenter
             
         var targetPosition = _localLastClientInQueue == null ? _shop.position : _localLastClientInQueue.transform.position;
 
-        if (_view.transform.position.y <= targetPosition.y - 1.5f)
+        if (_view.transform.position.y < targetPosition.y - 1.5f)
             _view.transform.Translate(Vector3.up * Config.ClientSpeed * Time.deltaTime);
         else
             _model.InvokeOnReachedEndOfQueue();

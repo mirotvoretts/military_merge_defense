@@ -7,24 +7,27 @@ public class CraftButton : MonoBehaviour
 
     private bool _anyProductWasCrafted;
 
-    public void TryCraftAnyProduct()
+    public void TryCraftRequestedProduct()
     {
-        foreach (var item in _shop.Products.Sequence)
+        var firstClient = QueueOfClients.Peek();
+
+        if (firstClient == null)
         {
-            var product = (ProductsData.Product)item;
-
-            if (IsPossibleToCraftProduct(product))
-            {
-                Craft(product);
-                Debug.Log($"{product.Name} был скрафчен!");
-                _anyProductWasCrafted = true;
-            }
+            Debug.Log("Очередь пуста!");
         }
-
-        if (!_anyProductWasCrafted)
-            Debug.Log("Недостаточно ресурсов");
-
-        _anyProductWasCrafted = false;
+        else if (ShopView.Instance.Inventory.Contains(firstClient.Presenter.RequestedProduct))
+        {
+            Debug.Log("Продукт уже скрафчен! Пора отдавать!");
+        }
+        else if (IsPossibleToCraftProduct(firstClient.Presenter.RequestedProduct))
+        {
+            Craft(firstClient.Presenter.RequestedProduct);
+            Debug.Log($"{firstClient.Presenter.RequestedProduct.Name} был скрафчен!");
+        }
+        else
+        {
+            Debug.Log("Недостаточно ресурсов, чтобы выполнить заказ!");
+        }
     }
 
     private bool IsPossibleToCraftProduct(ProductsData.Product product)
