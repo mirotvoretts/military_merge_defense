@@ -8,24 +8,36 @@ public class WaveSystem : MonoBehaviour
 {
     [SerializeField] private EnemyFactory _enemyFactory;
     [SerializeField] private TMP_Text _waveText;
+    [SerializeField] private TMP_Text _enemyText;
     [SerializeField] private TMP_Text _timerText;
-    private int _wave, _enemyCount, _waveTimer;
+    private static int s_wave; 
+    private int _enemyCount, _waveTimer;
 
-    public Action OnWaveChanged;
-    public int Wave
+    public static Action OnWaveChanged;
+    public static int Wave
     {
-        get => _wave; 
+        get => s_wave; 
         private set 
         {
-            _wave = value;
+            s_wave = value;
             OnWaveChanged?.Invoke();
+        }
+    }
+
+    public int EnemyCount
+    {
+        get => _enemyCount;
+        private set
+        {
+            _enemyCount = value;
+            _enemyText.text = _enemyCount.ToString();
         }
     }
 
     private void Start()
     {
         _enemyFactory.OnEnemySpawned += ListenEnemyDeath;
-        OnWaveChanged += () => _waveText.text = Wave.ToString();
+        OnWaveChanged += () => _waveText.text = "Волна " + Wave;
         Wave = 0;
         StartCoroutine(StartWave(10));
     }
@@ -34,8 +46,8 @@ public class WaveSystem : MonoBehaviour
     {
         enemy.OnDied += (enemy) =>
         {
-            _enemyCount--;
-            if(_enemyCount == 0)
+            EnemyCount--;
+            if(EnemyCount == 0)
             {
                 StartCoroutine(StartWave(20));
             }
@@ -45,7 +57,7 @@ public class WaveSystem : MonoBehaviour
     private IEnumerator StartWave(int delay)
     {
         Wave++;
-        _enemyCount = 10 + 5 * (Wave - 1);
+        EnemyCount = 10 + 5 * (Wave - 1);
         _waveTimer = delay;
         for (;_waveTimer >= 0; _waveTimer--)
         {
@@ -53,7 +65,7 @@ public class WaveSystem : MonoBehaviour
             yield return new WaitForSeconds(1);
         }
 
-        _enemyFactory.SpawnEnemy(_enemyCount);
+        _enemyFactory.SpawnEnemy(EnemyCount);
     }
 
     public void SkipWaiting()

@@ -11,8 +11,8 @@ public static class UnityExtensions
         selfTransform.rotation = Quaternion.Euler(0f, 0f, rotateZ);
     }
 
-    public static BaseTower GetRandomValue(this BaseTower[] baseTowers)
+    public static T GetRandomValue<T>(this T[] array)
     {
-        return baseTowers[Random.Range(0, baseTowers.Length)];
+        return array[Random.Range(0, array.Length)];
     }
 }
