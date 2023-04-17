@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: Weapon
+  m_EditorClassIdentifier: Assembly-CSharp::ProductsData/Product
+  _name: "\u0410\u041A-47"
+  _icon: {fileID: 21300000, guid: df403ca60dcde6b4d8f2758148baa40e, type: 3}
+  _price: 200
+  _craftReceipt:
+  - {fileID: 11400000, guid: 2399160f0ce68bf42b03f3b89c996032, type: 2}
+  - {fileID: 11400000, guid: 04fff60882451554db236abce5b99ec7, type: 2}

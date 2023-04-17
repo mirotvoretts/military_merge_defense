@@ -1,0 +1,2017 @@
+fileFormatVersion: 2
+guid: fb098b5dc7573c74497c85470d44a76f
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: resources-outlined-264x264 1_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 242
+        width: 22
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdcde29c33121db498f36f4c9d2b4523
+      internalID: 58499851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resources-outlined-264x264 1_1
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 241
+        width: 24
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ab93b9f22ccd9c4a914fbf6ba65d4a3
+      internalID: -1720951822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resources-outlined-264x264 1_2
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 241
+        width: 23
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c41e86355bd4c14984483e472a12eb7
+      internalID: -1668233614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resources-outlined-264x264 1_3
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 240
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02ea524bbe99eb042b4e8d8ad8fa86b3
+      internalID: -95411756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resources-outlined-264x264 1_4
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 244
+        width: 19
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 226e7898939963644a8361899eb70690
+      internalID: -290541874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resources-outlined-264x264 1_5
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 244
+        width: 22
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b8f3d71c29b19f45b06d63e786d5866
+      internalID: 964313538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resources-outlined-264x264 1_6
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 242
+        width: 22
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08a426eec1a80a84f864b39eea978b3f
+      internalID: -1779533015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resources-outlined-264x264 1_7
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 241
+        width: 24
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6afd4a68a5ed8af4c89381d3dff4cfae
+      internalID: -1735269643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resources-outlined-264x264 1_8
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 242
+        width: 22
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4dd97d5b9f3278e429a91752c7272560
+      internalID: 45291891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resources-outlined-264x264 1_9
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 241
+        width: 24
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b10536ec2efdef41a7215999f747d80
+      internalID: 1103906301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resources-outlined-264x264 1_10
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 218
+        width: 22
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5cd26630d731ee4493e1e808faf4dd0
+      internalID: 372484608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resources-outlined-264x264 1_11
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 219
+        width: 23
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5117419d2ffe45845a74fae07fd41ee2
+      internalID: 1260422477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resources-outlined-264x264 1_12
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 217
+        width: 23
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48ad0974c9873b5418157506cf632919
+      internalID: 770448265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resources-outlined-264x264 1_13
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 218
+        width: 23
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f751a415155701f4cb60804a5e916f2d
+      internalID: 695685419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resources-outlined-264x264 1_14
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 218
+        width: 23
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fd9721623640eb4ba523bd9153095fd
+      internalID: 874301009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resources-outlined-264x264 1_15
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 221
+        width: 20
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 096c2da755267a742a76042b2d5906a0
+      internalID: -386959531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resources-outlined-264x264 1_16
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 217
+        width: 23
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2826dc325a375c0469e525144c6e2e27
+      internalID: -1654613339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resources-outlined-264x264 1_17
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 218
+        width: 23
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fda5a84f82c418b4ab80bd81b8dfca1b
+      internalID: -367834166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resources-outlined-264x264 1_18
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 218
+        width: 23
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a55f302e6c7c96443bd91b721a0d3073
+      internalID: -184665174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resources-outlined-264x264 1_19
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 196
+        width: 14
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2da5bdb0a07e41548b4caac853b63d9c
+      internalID: 597478541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resources-outlined-264x264 1_20
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 195
+        width: 18
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c6ed080670c39e42a37e527373996aa
+      internalID: -975620351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resources-outlined-264x264 1_21
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 196
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 841579a2904c5f14e9fecafb8deba540
+      internalID: -1835500593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resources-outlined-264x264 1_22
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 195
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 481a3ced7c9c4c94cbe25b70380b7da7
+      internalID: 119683308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resources-outlined-264x264 1_23
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 196
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62b9840ef60182b4597391c7a4207c34
+      internalID: -1292144654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resources-outlined-264x264 1_24
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 195
+        width: 24
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45b908195c8185e4f993734e79a62346
+      internalID: -1018114819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resources-outlined-264x264 1_25
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 196
+        width: 14
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d0eadb1db376bf4496c886dbdb32de2
+      internalID: -1650146305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resources-outlined-264x264 1_26
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 196
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 000d585d52389444d81157a08c5c89f2
+      internalID: 1921376052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resources-outlined-264x264 1_27
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 196
+        width: 24
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8124a87056f630c479a5141f3e35c93e
+      internalID: -1005343691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resources-outlined-264x264 1_28
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 172
+        width: 20
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0890e425e2cf334ebb48901f7d11b5d
+      internalID: 549940384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resources-outlined-264x264 1_29
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 172
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3eacc3813901a324c8442f3a3b3eb8e9
+      internalID: 1341708507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resources-outlined-264x264 1_30
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 171
+        width: 21
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffb0d9195bca6f7459a77bba5b094d42
+      internalID: 1501491178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resources-outlined-264x264 1_31
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 170
+        width: 21
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6028f50defcc9ce41997cb9e59b39b36
+      internalID: 74736632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resources-outlined-264x264 1_32
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 171
+        width: 20
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc6afb169017e804bb6fa2c426e519af
+      internalID: -560403203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resources-outlined-264x264 1_33
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 172
+        width: 24
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3eec201bd59dcd94ab7645e05036afa9
+      internalID: -1569116147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resources-outlined-264x264 1_34
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 171
+        width: 21
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ee3dadb51581b547bd2a461ed346e64
+      internalID: 1701995728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resources-outlined-264x264 1_35
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 172
+        width: 20
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8de9958ad63753044b7f0e0c4f7ab2b4
+      internalID: -575359211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resources-outlined-264x264 1_36
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 172
+        width: 20
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f494e597dc2a01d47bcfb6dc672fe74b
+      internalID: -1655017541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resources-outlined-264x264 1_37
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 173
+        width: 17
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8f8afb48e5367a4f91a2de739e493d3
+      internalID: 1497011628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resources-outlined-264x264 1_38
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 150
+        width: 19
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5414bd5035c51b44db58718939d4030e
+      internalID: 57820600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resources-outlined-264x264 1_39
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 150
+        width: 17
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0674a5c3abfa324889db8bd7a4758e9
+      internalID: -612995325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resources-outlined-264x264 1_40
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 151
+        width: 19
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 143ab77b9a4bfe54895321b3daee1406
+      internalID: 922179249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resources-outlined-264x264 1_41
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 149
+        width: 22
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80b5264de0bdd5b4b8499e6bb58ba393
+      internalID: 1838492090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resources-outlined-264x264 1_42
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 150
+        width: 19
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcd965b6da9dfa240a8ab9b6b0b1aa35
+      internalID: 2073364431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resources-outlined-264x264 1_43
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 150
+        width: 19
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09e81ba84979b944c991c6125a7fb5d7
+      internalID: -178665747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resources-outlined-264x264 1_44
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 149
+        width: 22
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29902067b6e56b14eafce3682768b3e5
+      internalID: -1484219083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resources-outlined-264x264 1_45
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 150
+        width: 19
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f6e826f7f49cad4aba7fc6f240233ee
+      internalID: -1959078779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resources-outlined-264x264 1_46
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 150
+        width: 19
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de824d2ff8d2fa048bae34fdd398b96c
+      internalID: -1182846141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resources-outlined-264x264 1_47
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 149
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43e71ee5b3ba0ef48b04950b72202a95
+      internalID: 495036296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resources-outlined-264x264 1_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 125
+        width: 192
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1cf8c3fec240c342ae00f0fbe943826
+      internalID: 1254911059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resources-outlined-264x264 1_49
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 125
+        width: 24
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dab6911d7d32e014cb66c6e7fb542329
+      internalID: 16181965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resources-outlined-264x264 1_50
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 125
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44c698cfa6ffc19489483c0590b7ed30
+      internalID: 665524623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resources-outlined-264x264 1_51
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 101
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d530a6292cc23e4a80fbd8d70f6c54f
+      internalID: 2085090860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resources-outlined-264x264 1_52
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 100
+        width: 21
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30ca44537c13ea44399c2ca3e613055d
+      internalID: 749755193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resources-outlined-264x264 1_53
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 100
+        width: 20
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b244e332855c974982da781d7033429
+      internalID: 1058650865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resources-outlined-264x264 1_54
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 97
+        width: 20
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5a846343e54e204484c39923ea05164
+      internalID: -1625907450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resources-outlined-264x264 1_55
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 98
+        width: 24
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c254f127c27a2e14a96d6c0c0cf7af2f
+      internalID: -1853908734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resources-outlined-264x264 1_56
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 100
+        width: 21
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 067f532dbcbf04643a93d907b3879a3c
+      internalID: -291287641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resources-outlined-264x264 1_57
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 98
+        width: 17
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40d3a0ff7fcd5bb428af42ffd17be360
+      internalID: 1002746172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resources-outlined-264x264 1_58
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 100
+        width: 17
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 798de6dcf8e8bd7458b7b23dca22c0e1
+      internalID: -919604303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resources-outlined-264x264 1_59
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 97
+        width: 17
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38010eeac95fc1843b9c90261bad398a
+      internalID: -1554579091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resources-outlined-264x264 1_60
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 98
+        width: 17
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81ce8969ee0aba94d8a154a8ed27e298
+      internalID: -2120243095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resources-outlined-264x264 1_61
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 98
+        width: 17
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca90f076a9dfe3b4ebc33b8d81a25561
+      internalID: 1793584648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resources-outlined-264x264 1_62
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 73
+        width: 18
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e32c5a811f31924dba945907e207fe4
+      internalID: -15698094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resources-outlined-264x264 1_63
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 75
+        width: 21
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38cbacefafebafd4ea4659dcbf11f655
+      internalID: 2043098960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resources-outlined-264x264 1_64
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 74
+        width: 21
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f746156b4c8e94a49aa1aba17750d6e0
+      internalID: -1533463539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resources-outlined-264x264 1_65
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 75
+        width: 21
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5344fe5f123e20f43aa9a64ea8cd8a61
+      internalID: 2030659037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resources-outlined-264x264 1_66
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 75
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 073c9b89cbe8ea545b5f56517f25bf6c
+      internalID: 203476578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resources-outlined-264x264 1_67
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 74
+        width: 18
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6706c214fb19b154f83f6d420903b447
+      internalID: -2100235574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resources-outlined-264x264 1_68
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 74
+        width: 20
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac852499246e0dd40b4ab4d85b7ef5fa
+      internalID: 1392931909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resources-outlined-264x264 1_69
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 50
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cbdd612ad2bf514286c4783fe01ab52
+      internalID: 443017978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resources-outlined-264x264 1_70
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 51
+        width: 240
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9f0223ac08f31543a246dbc398318b0
+      internalID: 1242226354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resources-outlined-264x264 1_71
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 25
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58448566610733a449da162b5bfc474d
+      internalID: -1630334394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resources-outlined-264x264 1_72
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 24
+        width: 96
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51f0cbf1397013243b39ac1966d572ca
+      internalID: 871884659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resources-outlined-264x264 1_73
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 1
+        width: 22
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d835d4d70500a2847aae29522c1810c2
+      internalID: 1250491224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resources-outlined-264x264 1_74
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 24
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 203fe59b280129f40b9a01e84db62574
+      internalID: 438873020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resources-outlined-264x264 1_75
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1
+        width: 18
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08aacd0633a4842499b42c72b9a29536
+      internalID: -320150739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resources-outlined-264x264 1_76
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 1
+        width: 12
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87b421435074ad84f9d6462cf72fcdd0
+      internalID: 824038225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resources-outlined-264x264 1_77
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 1
+        width: 18
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ea22d86248266b499c787b2f65d2c9e
+      internalID: -252339506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resources-outlined-264x264 1_78
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 1
+        width: 12
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4282ec5c1df16f5428a4273b31a656ff
+      internalID: 2029099764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resources-outlined-264x264 1_79
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 1
+        width: 18
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81c5ecbd41a76fa4792038418f5e3e22
+      internalID: -1633442857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resources-outlined-264x264 1_80
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 1
+        width: 18
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a452b73c19150a74da0930d6e932bb5f
+      internalID: -1911027252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resources-outlined-264x264 1_81
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 1
+        width: 12
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9facc6d3155e97241a8f933ca351b1e2
+      internalID: -395069893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resources-outlined-264x264 1_82
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 1
+        width: 18
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 276dbd06a18fcac4fb12c9c13718f6c2
+      internalID: 1635136656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resources-outlined-264x264 1_83
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 1
+        width: 13
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9beaf0a059267c47a6ebc508ae3cfe9
+      internalID: 556962609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resources-outlined-264x264 1_84
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 2
+        width: 17
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9afffe777ae3b34a9894c1e1b350d22
+      internalID: 991940938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      resources-outlined-264x264 1_9: 1103906301
+      resources-outlined-264x264 1_76: 824038225
+      resources-outlined-264x264 1_66: 203476578
+      resources-outlined-264x264 1_51: 2085090860
+      resources-outlined-264x264 1_77: -252339506
+      resources-outlined-264x264 1_48: 1254911059
+      resources-outlined-264x264 1_74: 438873020
+      resources-outlined-264x264 1_30: 1501491178
+      resources-outlined-264x264 1_49: 16181965
+      resources-outlined-264x264 1_71: -1630334394
+      resources-outlined-264x264 1_26: 1921376052
+      resources-outlined-264x264 1_83: 556962609
+      resources-outlined-264x264 1_82: 1635136656
+      resources-outlined-264x264 1_11: 1260422477
+      resources-outlined-264x264 1_17: -367834166
+      resources-outlined-264x264 1_75: -320150739
+      resources-outlined-264x264 1_39: -612995325
+      resources-outlined-264x264 1_31: 74736632
+      resources-outlined-264x264 1_43: -178665747
+      resources-outlined-264x264 1_5: 964313538
+      resources-outlined-264x264 1_53: 1058650865
+      resources-outlined-264x264 1_54: -1625907450
+      resources-outlined-264x264 1_37: 1497011628
+      resources-outlined-264x264 1_52: 749755193
+      resources-outlined-264x264 1_21: -1835500593
+      resources-outlined-264x264 1_36: -1655017541
+      resources-outlined-264x264 1_61: 1793584648
+      resources-outlined-264x264 1_64: -1533463539
+      resources-outlined-264x264 1_35: -575359211
+      resources-outlined-264x264 1_72: 871884659
+      resources-outlined-264x264 1_79: -1633442857
+      resources-outlined-264x264 1_27: -1005343691
+      resources-outlined-264x264 1_7: -1735269643
+      resources-outlined-264x264 1_50: 665524623
+      resources-outlined-264x264 1_18: -184665174
+      resources-outlined-264x264 1_8: 45291891
+      resources-outlined-264x264 1_13: 695685419
+      resources-outlined-264x264 1_34: 1701995728
+      resources-outlined-264x264 1_29: 1341708507
+      resources-outlined-264x264 1_46: -1182846141
+      resources-outlined-264x264 1_4: -290541874
+      resources-outlined-264x264 1_78: 2029099764
+      resources-outlined-264x264 1_14: 874301009
+      resources-outlined-264x264 1_60: -2120243095
+      resources-outlined-264x264 1_2: -1668233614
+      resources-outlined-264x264 1_20: -975620351
+      resources-outlined-264x264 1_28: 549940384
+      resources-outlined-264x264 1_73: 1250491224
+      resources-outlined-264x264 1_25: -1650146305
+      resources-outlined-264x264 1_44: -1484219083
+      resources-outlined-264x264 1_81: -395069893
+      resources-outlined-264x264 1_63: 2043098960
+      resources-outlined-264x264 1_69: 443017978
+      resources-outlined-264x264 1_33: -1569116147
+      resources-outlined-264x264 1_58: -919604303
+      resources-outlined-264x264 1_67: -2100235574
+      resources-outlined-264x264 1_32: -560403203
+      resources-outlined-264x264 1_59: -1554579091
+      resources-outlined-264x264 1_56: -291287641
+      resources-outlined-264x264 1_65: 2030659037
+      resources-outlined-264x264 1_68: 1392931909
+      resources-outlined-264x264 1_19: 597478541
+      resources-outlined-264x264 1_80: -1911027252
+      resources-outlined-264x264 1_84: 991940938
+      resources-outlined-264x264 1_45: -1959078779
+      resources-outlined-264x264 1_42: 2073364431
+      resources-outlined-264x264 1_15: -386959531
+      resources-outlined-264x264 1_23: -1292144654
+      resources-outlined-264x264 1_41: 1838492090
+      resources-outlined-264x264 1_70: 1242226354
+      resources-outlined-264x264 1_38: 57820600
+      resources-outlined-264x264 1_10: 372484608
+      resources-outlined-264x264 1_24: -1018114819
+      resources-outlined-264x264 1_16: -1654613339
+      resources-outlined-264x264 1_1: -1720951822
+      resources-outlined-264x264 1_55: -1853908734
+      resources-outlined-264x264 1_12: 770448265
+      resources-outlined-264x264 1_22: 119683308
+      resources-outlined-264x264 1_40: 922179249
+      resources-outlined-264x264 1_0: 58499851
+      resources-outlined-264x264 1_3: -95411756
+      resources-outlined-264x264 1_57: 1002746172
+      resources-outlined-264x264 1_47: 495036296
+      resources-outlined-264x264 1_62: -15698094
+      resources-outlined-264x264 1_6: -1779533015
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
