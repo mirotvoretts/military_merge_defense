@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class DefaultEnemy : BaseEnemy
 {
-    protected override void UpdateStats()
+    public override void UpdateStats()
     {
-        Speed = BasicSpeed;
-        Health = BasicHealth;
+        Speed = Mathf.Clamp(BasicSpeed + WaveSystem.Wave * 0.15f, 0, MaxSpeed - 5);
+        Health = BasicHealth + WaveSystem.Wave * 1.5f;
     }
 }

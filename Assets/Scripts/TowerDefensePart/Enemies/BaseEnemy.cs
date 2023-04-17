@@ -12,13 +12,14 @@ public abstract class BaseEnemy : MonoBehaviour
 
     protected const float MaxSpeed = 25;
     [SerializeField] protected float BasicSpeed = 1f;
-    [SerializeField] protected float BasicHealth;
+    [SerializeField] protected float BasicHealth = 10f;
+    [HideInInspector]public float Speed;
 
-    protected float Speed;
     protected float Health;
     protected RouteMark[] RouteMarks;
     public IEnumerator RouteMovement;
     private Vector3 _movementDirection;
+    private RouteMark _mark;
 
     public Action<BaseEnemy> OnDied;
 
@@ -35,6 +36,7 @@ public abstract class BaseEnemy : MonoBehaviour
     {
         foreach(var mark in RouteMarks)
         {
+            _mark = mark;
             Body.LookAt2D(mark.transform);
             _movementDirection = (mark.transform.position - transform.position).normalized;
             yield return null;
@@ -45,6 +47,8 @@ public abstract class BaseEnemy : MonoBehaviour
     {
         while(true)
         {
+            Body.LookAt2D(_mark.transform);
+            _movementDirection = (_mark.transform.position - transform.position).normalized;
             Vector3 direction = _movementDirection * Speed/1000;
             transform.position += direction;
             yield return null;
@@ -67,6 +71,13 @@ public abstract class BaseEnemy : MonoBehaviour
         }
     }
 
+    public void ForceKill()
+    {
+        HealthBar.fillAmount = 0;
+        OnDied?.Invoke(this);
+        Destroy(gameObject);
+    }
+
     public virtual void TakeDamage(float damage)
     {
         Health -= damage;
@@ -77,5 +88,6 @@ public abstract class BaseEnemy : MonoBehaviour
             Destroy(gameObject);
         }
     }
-    protected abstract void UpdateStats();
+
+    public abstract void UpdateStats();
 }

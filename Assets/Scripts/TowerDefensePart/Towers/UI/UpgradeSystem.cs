@@ -53,7 +53,7 @@ public class UpgradeSystem : MonoBehaviour
     {
         if(index == 0)
         {
-            FireRateMod += 0.1f;
+            FireRateMod = FireRateMod + 0.1f;
             s_fireRateLevel++;
 
             s_fireRatePrice = CalculatePrice(s_fireRateLevel);
@@ -62,7 +62,7 @@ public class UpgradeSystem : MonoBehaviour
         }
         else
         {
-            DamageMod += 0.1f;
+            DamageMod = DamageMod + 0.1f;
             s_damageLevel++;
 
             s_damagePrice = CalculatePrice(s_damageLevel);

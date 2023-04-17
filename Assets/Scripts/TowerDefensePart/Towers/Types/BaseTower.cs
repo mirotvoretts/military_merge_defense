@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Data;
 using UnityEngine;
 
 public abstract class BaseTower : MonoBehaviour
@@ -27,6 +28,8 @@ public abstract class BaseTower : MonoBehaviour
         Enemies = new List<BaseEnemy>();
         RangeCollider = GetComponent<CircleCollider2D>();
         BasicRangeScale = RangeCollider.transform.localScale;
+        UpgradeSystem.onUpgraded += UpdateStats;
+        UpdateStats();
 
         StartCoroutine("FollowEnemy");
 

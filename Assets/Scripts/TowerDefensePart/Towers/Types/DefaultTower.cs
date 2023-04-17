@@ -12,8 +12,8 @@ public class DefaultTower : BaseTower
             float reload = 0;
             if(CurrentEnemy != null)
             {
-                CurrentEnemy.TakeDamage(BasicDamage);
-                reload = BasicFireRate;
+                CurrentEnemy.TakeDamage(Damage);
+                reload = 60/FireRate;
                 TowerGun.GunAnimator.SetTrigger("OnFire");
             }
             yield return new WaitForSeconds(reload);
@@ -22,5 +22,7 @@ public class DefaultTower : BaseTower
 
     protected override void UpdateStats()
     {
+        FireRate = BasicFireRate + 1 * UpgradeSystem.FireRateMod;
+        Damage = BasicDamage + 0.7f * UpgradeSystem.DamageMod;
     }
 }

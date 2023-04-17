@@ -102,10 +102,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 554c235d72a6ab744bc3807420794e56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BasicFireRate: 1
-  BasicDamage: 7
+  BasicFireRate: 20
+  BasicDamage: 15
   TowerLevel: 3
   TowerGun: {fileID: 3507815613333451041}
+  _stunDuration: 2
+  _stunChance: 25
 --- !u!58 &7490648409673244113
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -121,7 +123,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 2.8298259
+  m_Radius: 3
 --- !u!1001 &239555943605083153
 PrefabInstance:
   m_ObjectHideFlags: 0

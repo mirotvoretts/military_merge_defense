@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class RogueTower : BaseTower
 {
+    [SerializeField] private float _critModifier;
+    [SerializeField] private int _critChance;
     protected override IEnumerator Attack()
     {
         while (true)
@@ -11,8 +13,13 @@ public class RogueTower : BaseTower
             float reload = 0;
             if (CurrentEnemy != null)
             {
-                CurrentEnemy.TakeDamage(BasicDamage);
-                reload = BasicFireRate;
+                float damage = Damage;
+                if (Random.Range(0, 100) < _critChance)
+                {
+                    damage *= _critModifier;    
+                }
+                CurrentEnemy.TakeDamage(damage);
+                reload = 60 / FireRate;
                 TowerGun.GunAnimator.SetTrigger("OnFire");
             }
             yield return new WaitForSeconds(reload);
@@ -21,5 +28,7 @@ public class RogueTower : BaseTower
 
     protected override void UpdateStats()
     {
+        FireRate = BasicFireRate + 1.2f * UpgradeSystem.FireRateMod;
+        Damage = BasicDamage + 0.5f * UpgradeSystem.DamageMod;
     }
 }
