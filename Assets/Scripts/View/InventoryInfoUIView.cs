@@ -6,29 +6,27 @@ using UnityEngine.UI;
 
 public class InventoryInfoUIView : UIView
 {
-    [SerializeField] private Button _closeButton;
-    [SerializeField] private TextMeshProUGUI _materialsList;
-    [SerializeField] private TextMeshProUGUI _productsList;
+    [SerializeField] private Image[] _materialsList;
+    [SerializeField] private Image[] _productsList;
+
+    [SerializeField] private ProductsData _productsData;
+    [SerializeField] private MaterialsData _materialsData;
+
+    private readonly List<Sprite> _productsIcons = new();
+    private readonly List<Sprite> _materialsIcons = new();
 
     public override void Show()
     {
-        ResetButtonWith(_closeButton, Close);
+        if (_productsIcons.Count == 0 && _materialsIcons.Count == 0)
+        {
+            foreach (var product in _productsData.Sequence)
+                _productsIcons.Add(product.Icon);
+        
+            foreach (var material in _materialsData.Sequence)
+                _materialsIcons.Add(material.Icon);
+        }
 
-        var materialsNames = new List<string> {Config.SteelName, Config.GunpowderName, Config.GlassName};
-        var materialsCount = CountElementsByNames(materialsNames);
-
-        var productsNames = new List<string> {Config.WeaponName, Config.ScopeName, Config.AmmoName};
-        var productsCount = CountElementsByNames(productsNames);
-
-        _materialsList.text =
-            $"- {Config.SteelName}: {materialsCount[Config.SteelName]}x\n-" +
-            $"{Config.GunpowderName}: {materialsCount[Config.GunpowderName]}x\n-" +
-            $"{Config.GlassName}: {materialsCount[Config.GlassName]}x";
-
-        _productsList.text =
-            $"- {Config.WeaponName}: {productsCount[Config.WeaponName]}x\n-" +
-            $"{Config.ScopeName}: {productsCount[Config.ScopeName]}x\n-" +
-            $"{Config.AmmoName}: {productsCount[Config.AmmoName]}x";
+        DisplayItemsIcons();
 
         gameObject.SetActive(true);
     }
@@ -38,18 +36,23 @@ public class InventoryInfoUIView : UIView
         gameObject.SetActive(false);
     }
 
-    private Dictionary<string, int> CountElementsByNames(List<string> elementsNames)
+    private void DisplayItemsIcons()
     {
-        var result = new Dictionary<string, int>(elementsNames.Count);
+        for (var i = 0; i < _materialsList.Length; i++)
+        {
+            _materialsList[i].sprite = _materialsIcons[i];
+            _materialsList[i].GetComponentInChildren<TextMeshProUGUI>().text = CountItemInInventory(_materialsData.Sequence[i]).ToString();
+        }
 
-        foreach (var elementName in elementsNames)
-            result[elementName] = CountItemInInventoryByName(elementName);
-
-        return result;
+        for (var i = 0; i < _productsList.Length; i++)
+        {
+            _productsList[i].sprite = _productsIcons[i];
+            _productsList[i].GetComponentInChildren<TextMeshProUGUI>().text = CountItemInInventory(_productsData.Sequence[i]).ToString();
+        }
     }
 
-    private int CountItemInInventoryByName(string itemName)
+    private int CountItemInInventory(Items.Item item)
     {
-        return ShopView.Instance.Inventory.Count(item => item.Name == itemName);
+        return ShopView.Instance.Inventory.Count(i => i == item);
     }
 }

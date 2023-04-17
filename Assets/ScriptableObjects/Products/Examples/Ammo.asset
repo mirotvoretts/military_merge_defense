@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Ammo
   m_EditorClassIdentifier: Assembly-CSharp::ProductsData/Product
   _name: "\u041F\u0430\u0442\u0440\u043E\u043D\u044B"
-  _icon: {fileID: 0}
+  _icon: {fileID: 21300000, guid: 429893a0b4ede6a489f4490c1a7c2dcb, type: 3}
   _price: 50
   _craftReceipt:
   - {fileID: 11400000, guid: 04fff60882451554db236abce5b99ec7, type: 2}

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Scope
   m_EditorClassIdentifier: Assembly-CSharp::ProductsData/Product
   _name: "\u041F\u0440\u0438\u0446\u0435\u043B"
-  _icon: {fileID: 0}
+  _icon: {fileID: 21300000, guid: 57b56d4d587bb9a4d89d398e4d35faeb, type: 3}
   _price: 150
   _craftReceipt:
   - {fileID: 11400000, guid: 76147ef8101035b4fa748d66889d97b8, type: 2}

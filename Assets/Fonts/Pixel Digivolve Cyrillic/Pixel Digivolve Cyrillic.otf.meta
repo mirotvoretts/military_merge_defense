@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 06a326fd42837bb4ab1b9ddf3390904f
+guid: 862479e3bd31cfd479db8d6e843230c7
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -9,7 +9,7 @@ TrueTypeFontImporter:
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - Pixograd
+  - Pixel Digivolve Cyrillic
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0

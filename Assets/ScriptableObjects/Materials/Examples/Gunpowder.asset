@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Gunpowder
   m_EditorClassIdentifier: Assembly-CSharp::MaterialsData/Material
   _name: "\u041F\u043E\u0440\u043E\u0445"
-  _icon: {fileID: 0}
+  _icon: {fileID: -290541874, guid: fb098b5dc7573c74497c85470d44a76f, type: 3}

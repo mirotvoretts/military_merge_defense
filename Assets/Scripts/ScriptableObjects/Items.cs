@@ -15,5 +15,6 @@ public abstract class Items : ScriptableObject
         [SerializeField] protected Sprite _icon;
         
         public string Name => _name;
+        public Sprite Icon => _icon;
     }
 }

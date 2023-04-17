@@ -3,6 +3,7 @@ using UnityEngine;
 public class ClientsSpawner : MonoBehaviour
 {
     [SerializeField] private GameObject _client;
+    private GameObject _previousClient;
 
     private Timer _timer;
 
@@ -20,6 +21,10 @@ public class ClientsSpawner : MonoBehaviour
 
     private void SpawnClient()
     {
-        Instantiate(_client, transform.position, Quaternion.identity);
+        if (_previousClient == null || _previousClient.transform.position != _client.transform.position)
+        {
+            var newClient = Instantiate(_client, transform.position, Quaternion.identity);
+            _previousClient = newClient;
+        }
     }
 }

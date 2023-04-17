@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Steel
   m_EditorClassIdentifier: Assembly-CSharp::MaterialsData/Material
   _name: "\u0421\u0442\u0430\u043B\u044C"
-  _icon: {fileID: 0}
+  _icon: {fileID: 874301009, guid: fb098b5dc7573c74497c85470d44a76f, type: 3}

@@ -20,13 +20,13 @@ public class ClientView : MonoBehaviour, IPointerClickHandler
 
     private void Update()
     {
-        if (!Presenter.FinishedMoving) Presenter.MoveToEndOfQueue();
+        Presenter.MoveToEndOfQueue();
         if (Presenter.ProductReceived) Presenter.MoveOutOfQueue();
     }
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        if (eventData.pointerId == Config.Mouse1Id && Presenter.FinishedMoving && IsFirstInQueue())
+        if (eventData.pointerId == Config.Mouse1Id && IsFirstInQueue())
         {
             if (_infoMenu.gameObject.activeSelf)
                 _infoMenu.Close();

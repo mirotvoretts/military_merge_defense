@@ -58,14 +58,15 @@ public class ClientPresenter : IPresenter
 
         if (_view.transform.position.y < targetPosition.y - 1.5f)
             _view.transform.Translate(Vector3.up * Config.ClientSpeed * Time.deltaTime);
-        else
-            _model.InvokeOnReachedEndOfQueue();
     }
 
     public void MoveOutOfQueue()
     {
-        TryLeaveQueue();
-        _view.transform.Translate(Vector3.left * Config.ClientSpeed * Time.deltaTime);
+        if (_view.transform.position.y >= _shop.position.y - 1.5f)
+        {
+            TryLeaveQueue();
+            _view.transform.Translate(Vector3.left * Config.ClientSpeed * Time.deltaTime);
+        }
     }
 
     public void Disable()
