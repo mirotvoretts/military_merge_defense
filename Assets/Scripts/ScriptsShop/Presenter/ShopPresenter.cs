@@ -3,10 +3,9 @@ using UnityEngine;
 
 public class ShopPresenter : IPresenter
 {
+    [SerializeField] private EnemyFactory _enemyFactory;
     private readonly Shop _model;
     private readonly ShopView _view;
-    
-    private readonly EnemyFactory _enemyFactory;
     
     public List<Items.Item> Inventory => _model.Inventory;
     
@@ -19,7 +18,7 @@ public class ShopPresenter : IPresenter
     
     public void Enable()
     {
-        _enemyFactory.EnemyDied += OnEnemyDied;
+        _enemyFactory.OnEnemySpawned += ListenEnemyDeath;
     }
 
     private void OnEnemyDied()
@@ -37,6 +36,14 @@ public class ShopPresenter : IPresenter
 
     public void Disable()
     {
-        _enemyFactory.EnemyDied -= OnEnemyDied;
+        _enemyFactory.OnEnemySpawned -= ListenEnemyDeath;
+    }
+
+    private void ListenEnemyDeath(BaseEnemy enemy)
+    {
+        enemy.OnDied += (enemy) =>
+        {
+            OnEnemyDied();
+        };
     }
 }
