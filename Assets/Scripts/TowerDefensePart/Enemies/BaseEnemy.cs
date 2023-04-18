@@ -49,7 +49,7 @@ public abstract class BaseEnemy : MonoBehaviour
         {
             Body.LookAt2D(_mark.transform);
             _movementDirection = (_mark.transform.position - transform.position).normalized;
-            Vector3 direction = _movementDirection * Speed/1000;
+            Vector3 direction = _movementDirection * Time.deltaTime * Speed/3.3f;
             transform.position += direction;
             yield return null;
         }

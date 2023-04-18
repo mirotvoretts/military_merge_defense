@@ -34,7 +34,7 @@ public class CameraMovement : MonoBehaviour
 
     private void Move(Vector3 direction)
     {
-        direction *= _cameraSpeed;
+        direction *= _cameraSpeed * Time.deltaTime;
         Vector3 newPosition = new Vector3
         (
             Mathf.Clamp(transform.position.x + direction.x, _boundaries.bounds.min.x, _boundaries.bounds.max.x),

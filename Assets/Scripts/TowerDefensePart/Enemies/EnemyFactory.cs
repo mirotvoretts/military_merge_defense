@@ -10,10 +10,6 @@ public class EnemyFactory : MonoBehaviour
 
     public Action<BaseEnemy> OnEnemySpawned;
 
-    private void Start()
-    {
-    }
-
     public void SpawnEnemy(int count)
     {
         StartCoroutine(SpawnEnemy(count, 2));

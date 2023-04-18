@@ -32,11 +32,9 @@ public abstract class BaseTower : MonoBehaviour
         UpdateStats();
 
         StartCoroutine("FollowEnemy");
-
+        StartCoroutine("Attack");
         OnEnemyNoticed += () => ChooseEnemy();
-        OnCurrentEnemyLost += () => StopCoroutine("Attack");
         OnCurrentEnemyLost += () => ChooseEnemy();
-        OnCurrentEnemyChoosed += () => StartCoroutine("Attack");
     }
 
     protected virtual void ChooseEnemy()
@@ -44,7 +42,7 @@ public abstract class BaseTower : MonoBehaviour
         if (CurrentEnemy == null && Enemies.Count > 0)
         {
             CurrentEnemy = Enemies[0];
-            OnCurrentEnemyChoosed();
+            OnCurrentEnemyChoosed?.Invoke();
         }
     }
 
