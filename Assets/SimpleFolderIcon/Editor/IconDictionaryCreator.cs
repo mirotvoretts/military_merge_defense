@@ -46,10 +46,10 @@ namespace SimpleFolderIcon.Editor
 
             var dir = new DirectoryInfo(Application.dataPath + "/" + AssetsPath);
             FileInfo[] info = dir.GetFiles("*.png");
-            foreach(FileInfo f in info)
+            foreach (FileInfo f in info)
             {
                 var texture = (Texture)AssetDatabase.LoadAssetAtPath($"Assets/SimpleFolderIcon/Icons/{f.Name}", typeof(Texture2D));
-                dictionary.Add(Path.GetFileNameWithoutExtension(f.Name),texture);
+                dictionary.Add(Path.GetFileNameWithoutExtension(f.Name), texture);
             }
 
             IconDictionary = dictionary;
