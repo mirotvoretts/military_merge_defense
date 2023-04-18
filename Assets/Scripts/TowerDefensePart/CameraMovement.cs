@@ -6,12 +6,9 @@ using UnityEngine;
 public class CameraMovement : MonoBehaviour
 {
     [SerializeField] private PolygonCollider2D _boundaries;
-    private Transform _transform;
+    [SerializeField] private Camera _camera;
+    [SerializeField] private float _cameraSpeed = 0.2f;
 
-    private void Start()
-    {
-        _transform = GetComponent<Transform>(); 
-    }
     private void Update()
     {
         if(Input.GetKey(KeyCode.A))
@@ -37,13 +34,16 @@ public class CameraMovement : MonoBehaviour
 
     private void Move(Vector3 direction)
     {
-        direction /= 3.8f;
+        direction *= _cameraSpeed;
         Vector3 newPosition = new Vector3
         (
-            Mathf.Clamp(_transform.position.x + direction.x, _boundaries.bounds.min.x, _boundaries.bounds.max.x),
-            Mathf.Clamp(_transform.position.y + direction.y, _boundaries.bounds.min.y, _boundaries.bounds.max.y),
-            _transform.position.z
+            Mathf.Clamp(transform.position.x + direction.x, _boundaries.bounds.min.x, _boundaries.bounds.max.x),
+            Mathf.Clamp(transform.position.y + direction.y, _boundaries.bounds.min.y, _boundaries.bounds.max.y),
+            transform.position.z
         );
-        _transform.position = newPosition;
+        transform.position = newPosition;
+        newPosition = _camera.ViewportToWorldPoint(new Vector2(0.5f, 0.5f));
+        newPosition.z = transform.position.z;
+        transform.position = newPosition;
     }
 }
