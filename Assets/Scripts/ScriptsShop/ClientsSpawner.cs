@@ -21,10 +21,6 @@ public class ClientsSpawner : MonoBehaviour
 
     private void SpawnClient()
     {
-        if (_previousClient == null || _previousClient.transform.position != _client.transform.position)
-        {
-            var newClient = Instantiate(_client, transform.position, Quaternion.identity);
-            _previousClient = newClient;
-        }
+        Instantiate(_client, transform.position, Quaternion.identity);
     }
 }

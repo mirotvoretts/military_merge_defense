@@ -1,7 +1,7 @@
-﻿using UnityEngine;
-using UnityEngine.EventSystems;
+﻿using System;
+using UnityEngine;
 
-public class ClientView : MonoBehaviour, IPointerClickHandler
+public class ClientView : MonoBehaviour, IClickable
 {
     [SerializeField] private ProductsData _productsData;
     [SerializeField] private Transform _shop;
@@ -11,6 +11,8 @@ public class ClientView : MonoBehaviour, IPointerClickHandler
     
     public void OnProductReceived() => Presenter.InvokeOnProductReceived();
     public Transform Shop => _shop;
+    
+    public Action<IClickable> OnClicked { get; set; }
 
     private void Awake()
     {
@@ -24,15 +26,12 @@ public class ClientView : MonoBehaviour, IPointerClickHandler
         if (Presenter.ProductReceived) Presenter.MoveOutOfQueue();
     }
 
-    public void OnPointerClick(PointerEventData eventData)
+    private void OnMouseDown()
     {
-        if (eventData.pointerId == Config.Mouse1Id && IsFirstInQueue())
-        {
-            if (_infoMenu.gameObject.activeSelf)
-                _infoMenu.Close();
-            else
-                _infoMenu.Show();
-        }
+        if (_infoMenu.gameObject.activeSelf)
+            _infoMenu.Close();
+        else if (IsFirstInQueue())
+            _infoMenu.Show();
     }
 
     private bool IsFirstInQueue()

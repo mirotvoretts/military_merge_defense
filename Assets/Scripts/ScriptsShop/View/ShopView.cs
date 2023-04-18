@@ -1,8 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
 
-public class ShopView : MonoBehaviour, IPointerClickHandler
+public class ShopView : MonoBehaviour
 {
     public static ShopView Instance;
 
@@ -30,16 +29,13 @@ public class ShopView : MonoBehaviour, IPointerClickHandler
         _presenter = new ShopPresenter(this, _enemyFactory);
         _presenter.Enable();
     }
-    
-    public void OnPointerClick(PointerEventData eventData)
+
+    private void OnMouseDown()
     {
-        if (eventData.pointerId == Config.Mouse1Id)
-        {
-            if (_inventoryView.gameObject.activeSelf)
-                _inventoryView.Close();
-            else
-                _inventoryView.Show();
-        }
+        if (_inventoryView.gameObject.activeSelf)
+            _inventoryView.Close();
+        else
+            _inventoryView.Show();
     }
 
     private void OnDestroy()

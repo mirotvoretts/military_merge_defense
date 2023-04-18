@@ -2,10 +2,10 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "New Products Data", menuName = "Products Data", order = 51), System.Serializable]
+[CreateAssetMenu(fileName = "New Products Data", menuName = "Products Data", order = 51)]
 public class ProductsData : Items
 {
-    [CreateAssetMenu(fileName = "New Product", menuName = "Product", order = 52), System.Serializable]
+    [CreateAssetMenu(fileName = "New Product", menuName = "Product", order = 52)]
     public class Product : Item
     {
         [SerializeField] private int _price;

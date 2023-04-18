@@ -54,15 +54,15 @@ public class ClientPresenter : IPresenter
         if (_localLastClientInQueue != null && _localLastClientInQueue.Presenter.ProductReceived)
             _localLastClientInQueue = null;
             
-        var targetPosition = _localLastClientInQueue == null ? _shop.position : _localLastClientInQueue.transform.position;
+        var targetPosition = _localLastClientInQueue == null ? ShopView.Instance.transform.position : _localLastClientInQueue.transform.position;
 
-        if (_view.transform.position.y < targetPosition.y - 1.5f)
+        if (_view.transform.position.y < targetPosition.y - 2f)
             _view.transform.Translate(Vector3.up * Config.ClientSpeed * Time.deltaTime);
     }
 
     public void MoveOutOfQueue()
     {
-        if (_view.transform.position.y >= _shop.position.y - 1.5f)
+        if (_view.transform.position.y >= _shop.position.y - 2f)
         {
             TryLeaveQueue();
             _view.transform.Translate(Vector3.left * Config.ClientSpeed * Time.deltaTime);
