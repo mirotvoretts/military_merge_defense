@@ -84,10 +84,15 @@ public abstract class BaseEnemy : MonoBehaviour
         HealthBar.fillAmount = Health / BasicHealth;
         if (Health <= 0)
         {
-            OnDied?.Invoke(this);
-            Destroy(gameObject);
+            Die();
         }
     }
 
+    protected void Die()
+    {
+        OnDied?.Invoke(this);
+        gameObject.SetActive(false);
+        Destroy(gameObject, 3);
+    }
     public abstract void UpdateStats();
 }

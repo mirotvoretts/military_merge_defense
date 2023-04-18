@@ -1,5 +1,6 @@
 ﻿using System;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class ClientView : MonoBehaviour, IClickable
 {
@@ -28,6 +29,8 @@ public class ClientView : MonoBehaviour, IClickable
 
     private void OnMouseDown()
     {
+        if (EventSystem.current.IsPointerOverGameObject())
+            return;
         if (_infoMenu.gameObject.activeSelf)
             _infoMenu.Close();
         else if (IsFirstInQueue())

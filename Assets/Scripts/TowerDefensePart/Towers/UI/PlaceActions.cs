@@ -34,6 +34,15 @@ public class PlaceActions : MonoBehaviour
         _buildButton.OnClicked.AddListener(BuildTower);
         _mergeButton.OnClicked.AddListener(MergeTower);
         _destroyButton.OnClicked.AddListener(DestroyTower);
+
+        Score.ValueChanged += () =>
+        {
+            if (_currentPlace != null)
+            {
+                bool hasTower = _currentPlace.Tower != null;
+                _buildButton.IsUsable = hasTower && Score.BuyAvailable(_price);
+            }
+        };
     }
 
     private void SelectPlace(IClickable clickable)
@@ -45,7 +54,7 @@ public class PlaceActions : MonoBehaviour
 
             _currentPlace.GetComponent<SpriteRenderer>().color = new Color(0, 0.8f, 0);
             bool hasTower = towerPlace.Tower != null;
-            _buildButton.IsUsable = !hasTower;
+            _buildButton.IsUsable = !hasTower && Score.BuyAvailable(_price);
             _mergeButton.IsUsable = _mergeSystem.CheckMergeAbility(_currentPlace);
             _destroyButton.IsUsable = hasTower;
         }
@@ -65,7 +74,7 @@ public class PlaceActions : MonoBehaviour
 
     private void BuildTower()
     {
-        if (_buildButton.IsUsable)
+        if (_buildButton.IsUsable && Score.TryBuy(_price))
         {
             _currentPlace.BuildTower();
             _buildButton.IsUsable = false;
@@ -82,6 +91,7 @@ public class PlaceActions : MonoBehaviour
             _currentPlace.DestroyTower();
             _destroyButton.IsUsable = false;
             _buildButton.IsUsable = true;
+            _mergeButton.IsUsable = _mergeSystem.CheckMergeAbility(_currentPlace);
             SetNewPrice();
         }
     }

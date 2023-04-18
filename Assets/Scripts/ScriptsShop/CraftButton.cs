@@ -13,20 +13,20 @@ public class CraftButton : MonoBehaviour
 
         if (firstClient == null)
         {
-            Debug.Log("Очередь пуста!");
+            //Debug.Log("Очередь пуста!");
         }
         else if (ShopView.Instance.Inventory.Contains(firstClient.Presenter.RequestedProduct))
         {
-            Debug.Log("Продукт уже скрафчен! Пора отдавать!");
+            //Debug.Log("Продукт уже скрафчен! Пора отдавать!");
         }
         else if (IsPossibleToCraftProduct(firstClient.Presenter.RequestedProduct))
         {
             Craft(firstClient.Presenter.RequestedProduct);
-            Debug.Log($"{firstClient.Presenter.RequestedProduct.Name} был скрафчен!");
+           // Debug.Log($"{firstClient.Presenter.RequestedProduct.Name} был скрафчен!");
         }
         else
         {
-            Debug.Log("Недостаточно ресурсов, чтобы выполнить заказ!");
+            //Debug.Log("Недостаточно ресурсов, чтобы выполнить заказ!");
         }
     }
 

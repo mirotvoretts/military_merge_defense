@@ -19,7 +19,9 @@ public class InventoryInfoUIView : UIView
 
     private void Awake()
     {
+        Show();
         DisplayItemsIcons();
+        Close();
         _enemyFactory.OnEnemySpawned += ListenEnemyDeath;
     }
     

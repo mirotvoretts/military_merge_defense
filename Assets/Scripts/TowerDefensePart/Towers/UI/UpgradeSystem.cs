@@ -53,6 +53,9 @@ public class UpgradeSystem : MonoBehaviour
     {
         if(index == 0)
         {
+            if (!Score.TryBuy(s_fireRatePrice))
+                return;
+
             FireRateMod = FireRateMod + 0.1f;
             s_fireRateLevel++;
 
@@ -62,6 +65,9 @@ public class UpgradeSystem : MonoBehaviour
         }
         else
         {
+            if (!Score.TryBuy(s_damagePrice))
+                return;
+
             DamageMod = DamageMod + 0.1f;
             s_damageLevel++;
 

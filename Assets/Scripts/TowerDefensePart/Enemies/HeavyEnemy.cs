@@ -13,13 +13,11 @@ public class HeavyEnemy : BaseEnemy
     public override void TakeDamage(float damage)
     {
         damage *= 0.75f;
-
         Health -= damage;
         HealthBar.fillAmount = Health / BasicHealth;
         if (Health <= 0)
         {
-            OnDied?.Invoke(this);
-            Destroy(gameObject);
+            Die();
         }
     }
 }

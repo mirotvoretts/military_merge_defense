@@ -31,7 +31,8 @@ public class ShopPresenter : IPresenter
 
     private void OnEnemyDied()
     {
-        _model.PushToInventory(GetRandomMaterial());
+        if(Random.Range(0,100) < 10)
+            _model.PushToInventory(GetRandomMaterial());
     }
 
     private MaterialsData.Material GetRandomMaterial()

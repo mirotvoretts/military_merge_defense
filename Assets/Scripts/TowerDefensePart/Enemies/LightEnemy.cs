@@ -14,13 +14,11 @@ public class LightEnemy : BaseEnemy
     {
         if (Random.Range(0, 100) < 10)
             return;
-
         Health -= damage;
         HealthBar.fillAmount = Health / BasicHealth;
         if (Health <= 0)
         {
-            OnDied?.Invoke(this);
-            Destroy(gameObject);
+            Die();
         }
     }
 }
