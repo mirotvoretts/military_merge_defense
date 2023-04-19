@@ -28,7 +28,7 @@ public class Score : MonoBehaviour
     
     public static void OnSell(Product product)
     {
-        Value += product.Price;
+        Value += product.Price + WaveSystem.Wave * 10;
         ValueChanged?.Invoke();
     }
 

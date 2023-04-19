@@ -21,6 +21,6 @@ public class ClientsSpawner : MonoBehaviour
 
     private void SpawnClient()
     {
-        Instantiate(_client, transform.position, Quaternion.identity);
+        Instantiate(_client, transform.position, _client.transform.rotation);
     }
 }
