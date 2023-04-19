@@ -28,8 +28,8 @@ namespace TMPro.Examples
         //private string m_string;
         //private int m_frame;
 
-        private Material m_material01;
-        private Material m_material02;
+        private UnityEngine.Material m_material01;
+        private UnityEngine.Material m_material02;
 
 
 
@@ -66,7 +66,7 @@ namespace TMPro.Examples
                 //m_textMeshPro.fontColor = new Color32(255, 255, 255, 255);
 
                 m_material01 = m_textMeshPro.font.material;
-                m_material02 = Resources.Load<Material>("Fonts & Materials/LiberationSans SDF - BEVEL"); // Make sure the LiberationSans SDF exists before calling this...  
+                m_material02 = Resources.Load<UnityEngine.Material>("Fonts & Materials/LiberationSans SDF - BEVEL"); // Make sure the LiberationSans SDF exists before calling this...  
 
 
             }

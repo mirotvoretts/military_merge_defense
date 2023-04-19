@@ -26,7 +26,7 @@ public class Score : MonoBehaviour
         _label.text = Value.ToString();
     }
     
-    public static void OnSell(ProductsData.Product product)
+    public static void OnSell(Product product)
     {
         Value += product.Price;
         ValueChanged?.Invoke();

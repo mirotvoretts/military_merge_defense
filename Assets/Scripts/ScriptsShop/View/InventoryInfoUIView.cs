@@ -78,7 +78,7 @@ public class InventoryInfoUIView : UIView
         }
     }
 
-    private int CountItemInInventory(Items.Item item)
+    private int CountItemInInventory(Item item)
     {
         return ShopView.Instance.Inventory.Count(i => i == item);
     }

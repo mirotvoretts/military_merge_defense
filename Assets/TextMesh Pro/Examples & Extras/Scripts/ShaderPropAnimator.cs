@@ -9,7 +9,7 @@ namespace TMPro.Examples
     {
 
         private Renderer m_Renderer;
-        private Material m_Material;
+        private UnityEngine.Material m_Material;
 
         public AnimationCurve GlowCurve;
 

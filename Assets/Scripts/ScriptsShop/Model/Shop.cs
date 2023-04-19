@@ -2,13 +2,13 @@
 
 public class Shop
 {
-    public List<Items.Item> Inventory { get; }
+    public List<Item> Inventory { get; }
     
     private static Shop _instance;
 
     private Shop()
     {
-        Inventory = new List<Items.Item>();
+        Inventory = new List<Item>();
     }
 
     public static Shop GetInstance()
@@ -16,12 +16,12 @@ public class Shop
         return _instance ??= new Shop();
     }
 
-    public void PushToInventory(MaterialsData.Material material)
+    public void PushToInventory(CraftMaterial material)
     {
         Inventory.Add(material);
     }
     
-    public void RemoveFromInventory(MaterialsData.Material material)
+    public void RemoveFromInventory(CraftMaterial material)
     {
         Inventory.Remove(material);
     }

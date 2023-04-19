@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: 3590efbdde6269f43a37f9aab8e3563e, type: 3}
   m_Name: Glass
   m_EditorClassIdentifier: Assembly-CSharp::MaterialsData/Material
   _name: "\u0421\u0442\u0435\u043A\u043B\u043E"
-  _icon: {fileID: -612995325, guid: fb098b5dc7573c74497c85470d44a76f, type: 3}
+  _icon: {fileID: 495036296, guid: fb098b5dc7573c74497c85470d44a76f, type: 3}

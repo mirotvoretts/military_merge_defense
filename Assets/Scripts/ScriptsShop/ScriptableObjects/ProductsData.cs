@@ -6,18 +6,4 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Products Data", menuName = "Products Data", order = 51)]
 public class ProductsData : Items
 {
-    [CreateAssetMenu(fileName = "New Product", menuName = "Product", order = 52)]
-    public class Product : Item
-    {
-        [SerializeField] private int _price;
-        [SerializeField] private MaterialsData.Material[] _craftReceipt;
-        
-        public int Price => _price;
-        public IEnumerable<MaterialsData.Material> CraftReceipt => _craftReceipt;
-        
-        public bool ContainsIn(IEnumerable<Item> products)
-        {
-            return products.Contains(this);
-        }
-    }
 }

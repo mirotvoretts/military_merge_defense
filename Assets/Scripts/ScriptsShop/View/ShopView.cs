@@ -15,7 +15,7 @@ public class ShopView : MonoBehaviour
     public MaterialsData Materials => _materialsData;
     public ProductsData Products => _productsData;
     
-    public List<Items.Item> Inventory => _presenter.Inventory;
+    public List<Item> Inventory => _presenter.Inventory;
     
     private ShopView() { }
     

@@ -7,6 +7,7 @@ public class ClientInfoUIView : UIView
     [SerializeField] private TextMeshProUGUI _requestedProductLabel;
     [SerializeField] private Button _closeButton;
     [SerializeField] private Button _giveProductButton;
+    [SerializeField] private Button _banishButton;
     
     [SerializeField] private ClientView _client;
 
@@ -23,6 +24,7 @@ public class ClientInfoUIView : UIView
     {
         ResetButtonWith(_closeButton, Close);
         ResetButtonWith(_giveProductButton, OnGiveProduct);
+        ResetButtonWith(_banishButton, Banish);
         
         gameObject.SetActive(true);
     }
@@ -30,6 +32,12 @@ public class ClientInfoUIView : UIView
     public void Close()
     {
         gameObject.SetActive(false);
+    }
+
+    private void Banish()
+    {
+        _client.OnProductReceived();
+        Close();
     }
 
     private void OnGiveProduct()

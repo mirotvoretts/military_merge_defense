@@ -9,7 +9,7 @@ public class Client
     public event Action ProductReceived;
     public void InvokeOnProductReceived() => ProductReceived?.Invoke();
 
-    public ProductsData.Product RequestedProduct { get; }
+    public Product RequestedProduct { get; }
 
     private readonly ProductsData _productsData;
     
@@ -19,11 +19,11 @@ public class Client
         RequestedProduct = GetRandomProduct();
     }
 
-    private ProductsData.Product GetRandomProduct()
+    private Product GetRandomProduct()
     {
         var products = _productsData.Sequence;
         var productIndex = Random.Range(0, products.Count);
 
-        return (ProductsData.Product)_productsData.Sequence[productIndex];
+        return (Product)_productsData.Sequence[productIndex];
     }
 }

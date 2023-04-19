@@ -7,7 +7,7 @@ public class ShopPresenter : IPresenter
     private readonly Shop _model;
     private readonly ShopView _view;
     
-    public List<Items.Item> Inventory => _model.Inventory;
+    public List<Item> Inventory => _model.Inventory;
     
     public ShopPresenter(ShopView view, EnemyFactory enemyFactory)
     {
@@ -35,12 +35,12 @@ public class ShopPresenter : IPresenter
             _model.PushToInventory(GetRandomMaterial());
     }
 
-    private MaterialsData.Material GetRandomMaterial()
+    private CraftMaterial GetRandomMaterial()
     {
         var materialsSequence = _view.Materials.Sequence;
         var materialIndex = Random.Range(0, materialsSequence.Count);
         
-        return materialsSequence[materialIndex] as MaterialsData.Material;
+        return materialsSequence[materialIndex] as CraftMaterial;
     }
 
     public void Disable()

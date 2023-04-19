@@ -7,7 +7,7 @@ public class EnvMapAnimator : MonoBehaviour {
     //private Vector3 TranslationSpeeds;
     public Vector3 RotationSpeeds;
     private TMP_Text m_textMeshPro;
-    private Material m_material;
+    private UnityEngine.Material m_material;
     
 
     void Awake()

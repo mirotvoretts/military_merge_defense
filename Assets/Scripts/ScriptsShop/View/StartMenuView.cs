@@ -5,9 +5,8 @@ using UnityEngine.UI;
 public class StartMenuView : UIView
 {
     [SerializeField] private Button _startButton;
-    [SerializeField] private Button _exitButton;
-
-    private const string MainSceneName = "MainScene";
+    [SerializeField] private Button _tutorialButton;
+    [SerializeField] private string _mainSceneName = "MainScene";
 
     private void Awake()
     {
@@ -17,15 +16,15 @@ public class StartMenuView : UIView
     public override void Show()
     {
         ResetButtonWith(_startButton, OnStartButtonClick);
-        ResetButtonWith(_exitButton, OnExitButtonClick);
+        ResetButtonWith(_tutorialButton, OnTutorialButtonClick);
     }
 
     private void OnStartButtonClick()
     {
-        SceneManager.LoadScene(MainSceneName);
+        SceneManager.LoadScene(_mainSceneName);
     }
     
-    private void OnExitButtonClick()
+    private void OnTutorialButtonClick()
     {
         Application.Quit();
     }

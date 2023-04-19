@@ -30,12 +30,12 @@ public class CraftButton : MonoBehaviour
         }
     }
 
-    private bool IsPossibleToCraftProduct(ProductsData.Product product)
+    private bool IsPossibleToCraftProduct(Product product)
     {
         return product.CraftReceipt.All(material => material.ContainsIn(ShopView.Instance.Inventory));
     }
     
-    private void Craft(ProductsData.Product product)
+    private void Craft(Product product)
     {
         foreach (var material in product.CraftReceipt)
             ShopView.Instance.Inventory.Remove(material);

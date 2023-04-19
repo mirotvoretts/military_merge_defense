@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: 3590efbdde6269f43a37f9aab8e3563e, type: 3}
   m_Name: Steel
-  m_EditorClassIdentifier: Assembly-CSharp::MaterialsData/Material
+  m_EditorClassIdentifier: 
   _name: "\u0421\u0442\u0430\u043B\u044C"
-  _icon: {fileID: 874301009, guid: fb098b5dc7573c74497c85470d44a76f, type: 3}
+  _icon: {fileID: 2073364431, guid: fb098b5dc7573c74497c85470d44a76f, type: 3}

@@ -9,12 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: 8b511d2342607e142980e0bbc3fff70f, type: 3}
   m_Name: Scope
   m_EditorClassIdentifier: Assembly-CSharp::ProductsData/Product
   _name: "\u041F\u0440\u0438\u0446\u0435\u043B"
   _icon: {fileID: 21300000, guid: 57b56d4d587bb9a4d89d398e4d35faeb, type: 3}
-  _price: 150
+  _price: 250
   _craftReceipt:
   - {fileID: 11400000, guid: 76147ef8101035b4fa748d66889d97b8, type: 2}
-  - {fileID: 11400000, guid: 2399160f0ce68bf42b03f3b89c996032, type: 2}
+  - {fileID: 11400000, guid: 8bf7a66f054315f4fb7c5f8ac2d596bf, type: 2}
