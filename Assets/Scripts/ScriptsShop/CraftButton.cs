@@ -1,11 +1,18 @@
+using System;
 using System.Linq;
 using UnityEngine;
 
 public class CraftButton : MonoBehaviour
 {
-    [SerializeField] private ShopView _shop;
+    public Action ItemCrafted { get; set; }
 
+    private NoticeUIView _notice;
     private bool _anyProductWasCrafted;
+
+    private void Awake()
+    {
+        _notice = NoticeUIView.Instance;
+    }
 
     public void TryCraftRequestedProduct()
     {
@@ -13,20 +20,21 @@ public class CraftButton : MonoBehaviour
 
         if (firstClient == null)
         {
-            //Debug.Log("Очередь пуста!");
+            _notice.Show("Очередь пуста!");
+
         }
         else if (ShopView.Instance.Inventory.Contains(firstClient.Presenter.RequestedProduct))
         {
-            //Debug.Log("Продукт уже скрафчен! Пора отдавать!");
+            _notice.Show("Продукт уже скрафчен! Пора отдавать!");
         }
         else if (IsPossibleToCraftProduct(firstClient.Presenter.RequestedProduct))
         {
             Craft(firstClient.Presenter.RequestedProduct);
-           // Debug.Log($"{firstClient.Presenter.RequestedProduct.Name} был скрафчен!");
+            _notice.Show($"{firstClient.Presenter.RequestedProduct.Name} был скрафчен!");
         }
         else
         {
-            //Debug.Log("Недостаточно ресурсов, чтобы выполнить заказ!");
+            _notice.Show("Недостаточно ресурсов, чтобы выполнить заказ!");
         }
     }
 
@@ -41,5 +49,7 @@ public class CraftButton : MonoBehaviour
             ShopView.Instance.Inventory.Remove(material);
             
         ShopView.Instance.Inventory.Add(product);
+        
+        ItemCrafted?.Invoke();
     }
 }

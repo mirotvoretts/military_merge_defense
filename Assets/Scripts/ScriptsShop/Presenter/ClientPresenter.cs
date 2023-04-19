@@ -11,13 +11,12 @@ public class ClientPresenter : IPresenter
 
     public bool FinishedMoving { get; private set; }
     public bool ProductReceived { get; private set; }
-    
-    private void OnReachedEndOfQueue() => FinishedMoving = true;
+
     private void OnQueueStartedMoving() => FinishedMoving = false;
     private void OnProductReceived() => ProductReceived = true;
     
     public Product RequestedProduct => _model.RequestedProduct;
-    
+
     public void InvokeOnProductReceived() => _model.InvokeOnProductReceived();
 
     public ClientPresenter(ClientView view, Transform shop, ProductsData productsData)
@@ -30,7 +29,6 @@ public class ClientPresenter : IPresenter
     public void Enable()
     {
         _model.ProductReceived += OnProductReceived;
-        _model.ReachedEndOfQueue += OnReachedEndOfQueue;
         QueueOfClients.StartedMoving += OnQueueStartedMoving;
 
         _localLastClientInQueue = QueueOfClients.TryBack();
@@ -65,6 +63,7 @@ public class ClientPresenter : IPresenter
         if (_view.transform.position.y >= _shop.position.y - 2f)
         {
             TryLeaveQueue();
+            _view.Sprite.transform.LookAt2D(Vector3.left);
             _view.transform.Translate(Vector3.left * Config.ClientSpeed * Time.deltaTime);
         }
     }
@@ -72,7 +71,6 @@ public class ClientPresenter : IPresenter
     public void Disable()
     {
         _model.ProductReceived -= OnProductReceived;
-        _model.ReachedEndOfQueue -= OnReachedEndOfQueue;
         QueueOfClients.StartedMoving -= OnQueueStartedMoving;
     }
 }

@@ -8,12 +8,11 @@ public class GifRenderer : MonoBehaviour
     private const float FramesPerSecond = 10f;
 
     private Image _image;
-    private SpriteRenderer _render;
 
     private void Awake()
     {
         _image = GetComponent<Image>();
-        _render = GetComponent<SpriteRenderer>();
+        GetComponent<SpriteRenderer>();
     }
 
     private void Update()

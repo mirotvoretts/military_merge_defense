@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class InventoryInfoUIView : UIView
 {
+    [SerializeField] private CraftButton _craftButton;
+    
     [SerializeField] private EnemyFactory _enemyFactory;
     
     [SerializeField] private Image[] _materialsList;
@@ -22,7 +24,10 @@ public class InventoryInfoUIView : UIView
         Show();
         DisplayItemsIcons();
         Close();
+        
         _enemyFactory.OnEnemySpawned += ListenEnemyDeath;
+        _craftButton.ItemCrafted += DisplayItemsCounters;
+        ClientInfoUIView.ProductGiven += DisplayItemsCounters;
     }
     
     private void ListenEnemyDeath(BaseEnemy enemy)
@@ -43,7 +48,8 @@ public class InventoryInfoUIView : UIView
             foreach (var material in _materialsData.Sequence)
                 _materialsIcons.Add(material.Icon);
         }
-
+        
+        DisplayItemsCounters();
         gameObject.SetActive(true);
     }
 
@@ -85,6 +91,8 @@ public class InventoryInfoUIView : UIView
 
     private void OnDestroy()
     {
+        ClientInfoUIView.ProductGiven -= DisplayItemsCounters;
         _enemyFactory.OnEnemySpawned -= ListenEnemyDeath;
+        _craftButton.ItemCrafted -= DisplayItemsCounters;
     }
 }

@@ -20,9 +20,4 @@ public class Shop
     {
         Inventory.Add(material);
     }
-    
-    public void RemoveFromInventory(CraftMaterial material)
-    {
-        Inventory.Remove(material);
-    }
 }

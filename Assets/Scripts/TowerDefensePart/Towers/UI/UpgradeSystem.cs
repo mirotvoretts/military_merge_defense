@@ -1,6 +1,4 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
@@ -45,7 +43,7 @@ public class UpgradeSystem : MonoBehaviour
         _fireRatePriceText.text = s_fireRatePrice.ToString();
 
         s_damagePrice = CalculatePrice(s_damageLevel);
-        _damageLevelText.text = "Уровень: " + s_damageLevel.ToString();
+        _damageLevelText.text = "Уровень: " + s_damageLevel;
         _damagePriceText.text = s_damagePrice.ToString();
     }
 

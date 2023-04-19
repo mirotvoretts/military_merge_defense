@@ -1,4 +1,5 @@
-﻿using TMPro;
+﻿using System;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,9 +13,13 @@ public class ClientInfoUIView : UIView
     [SerializeField] private ClientView _client;
 
     private ShopView _shop;
+    private NoticeUIView _notice;
+
+    public static Action ProductGiven;
 
     private void Awake()
     {
+        _notice = NoticeUIView.Instance;
         _shop = ShopView.Instance;
         
         _requestedProductLabel.text = _client.Presenter.RequestedProduct.Name;
@@ -48,6 +53,7 @@ public class ClientInfoUIView : UIView
         {
             ShopView.Instance.Inventory.Remove(requestedProduct);
             
+            ProductGiven?.Invoke();
             _client.OnProductReceived();
             Score.OnSell(requestedProduct);
 
@@ -55,7 +61,7 @@ public class ClientInfoUIView : UIView
         }
         else
         {
-            Debug.Log("Невозможно отдать то, чего нет!");
+            _notice.Show("Невозможно отдать то, чего нет!");
         }
     }
 }

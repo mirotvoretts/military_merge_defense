@@ -8,13 +8,11 @@ public class ShopView : MonoBehaviour
     [SerializeField] private InventoryInfoUIView _inventoryView;
     [SerializeField] private EnemyFactory _enemyFactory;
     [SerializeField] private MaterialsData _materialsData;
-    [SerializeField] private ProductsData _productsData;
 
     private ShopPresenter _presenter;
     
     public MaterialsData Materials => _materialsData;
-    public ProductsData Products => _productsData;
-    
+
     public List<Item> Inventory => _presenter.Inventory;
     
     private ShopView() { }

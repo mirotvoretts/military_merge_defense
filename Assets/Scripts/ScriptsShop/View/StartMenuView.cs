@@ -6,7 +6,7 @@ public class StartMenuView : UIView
 {
     [SerializeField] private Button _startButton;
     [SerializeField] private Button _tutorialButton;
-    [SerializeField] private string _mainSceneName = "MainScene";
+    [SerializeField] private string _mainSceneName = "GameScene";
 
     private void Awake()
     {

@@ -3,9 +3,6 @@ using Random = UnityEngine.Random;
 
 public class Client
 {
-    public event Action ReachedEndOfQueue;
-    public void InvokeOnReachedEndOfQueue() => ReachedEndOfQueue?.Invoke();
-    
     public event Action ProductReceived;
     public void InvokeOnProductReceived() => ProductReceived?.Invoke();
 

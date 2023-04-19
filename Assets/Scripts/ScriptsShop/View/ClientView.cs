@@ -4,16 +4,16 @@ using UnityEngine.EventSystems;
 
 public class ClientView : MonoBehaviour, IClickable
 {
+    [SerializeField] private GameObject _sprite;
     [SerializeField] private ProductsData _productsData;
     [SerializeField] private Transform _shop;
     [SerializeField] private ClientInfoUIView _infoMenu;
 
     public ClientPresenter Presenter { get; private set; }
-    
-    public void OnProductReceived() => Presenter.InvokeOnProductReceived();
-    public Transform Shop => _shop;
-    
     public Action<IClickable> OnClicked { get; set; }
+    public GameObject Sprite => _sprite;
+
+    public void OnProductReceived() => Presenter.InvokeOnProductReceived();
 
     private void Awake()
     {
