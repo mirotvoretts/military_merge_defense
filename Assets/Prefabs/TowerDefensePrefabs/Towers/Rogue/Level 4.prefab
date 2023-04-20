@@ -103,7 +103,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdcea75e09f9748469aefcb0a461b539, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BasicFireRate: 40
+  BasicFireRate: 45
   BasicDamage: 6
   TowerLevel: 4
   TowerGun: {fileID: 978457969183457326}
@@ -119,6 +119,25 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -130,6 +149,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 7490648409673244112}
     m_Modifications:
     - target: {fileID: 5684107756529592673, guid: 12fe3252ad070044684ac22838ba9761, type: 3}
@@ -185,6 +205,9 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 12fe3252ad070044684ac22838ba9761, type: 3}
 --- !u!4 &8626105250666230907 stripped
 Transform:
@@ -196,6 +219,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 7490648409673244112}
     m_Modifications:
     - target: {fileID: 6652662262534314894, guid: c69ef4b0f4a160541bfc730d113503ff, type: 3}
@@ -247,6 +271,9 @@ PrefabInstance:
       value: RogueGun
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c69ef4b0f4a160541bfc730d113503ff, type: 3}
 --- !u!114 &978457969183457326 stripped
 MonoBehaviour:
@@ -269,6 +296,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 7490648409673244112}
     m_Modifications:
     - target: {fileID: 5684107756529592673, guid: 12fe3252ad070044684ac22838ba9761, type: 3}
@@ -324,6 +352,9 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 12fe3252ad070044684ac22838ba9761, type: 3}
 --- !u!4 &2255267246698363189 stripped
 Transform:
@@ -335,6 +366,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 7490648409673244112}
     m_Modifications:
     - target: {fileID: 5684107756529592673, guid: 12fe3252ad070044684ac22838ba9761, type: 3}
@@ -390,6 +422,9 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 12fe3252ad070044684ac22838ba9761, type: 3}
 --- !u!4 &1776066300286087219 stripped
 Transform:
@@ -401,6 +436,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 7490648409673244112}
     m_Modifications:
     - target: {fileID: 5684107756529592673, guid: 12fe3252ad070044684ac22838ba9761, type: 3}
@@ -456,6 +492,9 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 12fe3252ad070044684ac22838ba9761, type: 3}
 --- !u!4 &4018819013649269090 stripped
 Transform:
