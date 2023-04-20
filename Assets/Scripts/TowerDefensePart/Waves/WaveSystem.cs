@@ -61,7 +61,7 @@ public class WaveSystem : MonoBehaviour
         for (;_waveTimer >= 0; _waveTimer--)
         {
             _timerText.text = _waveTimer.ToString();
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(Mathf.Clamp(1 - Wave / 10, 0.1f, 1));
         }
 
         _enemyFactory.SpawnEnemy(EnemyCount);

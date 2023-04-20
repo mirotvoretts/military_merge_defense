@@ -17,9 +17,9 @@ public class SiegeTower : BaseTower
                 {
                     StartCoroutine(StunEnemy());
                 }
+                TowerGun.GunAnimator.SetTrigger("OnFire");
                 CurrentEnemy.TakeDamage(BasicDamage);
                 reload = 60 / FireRate;
-                TowerGun.GunAnimator.SetTrigger("OnFire");
             }
             yield return new WaitForSeconds(reload);
         }

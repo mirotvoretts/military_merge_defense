@@ -17,9 +17,9 @@ public class RogueTower : BaseTower
                 {
                     damage *= _critModifier;    
                 }
+                TowerGun.GunAnimator.SetTrigger("OnFire");
                 CurrentEnemy.TakeDamage(damage);
                 reload = 60 / FireRate;
-                TowerGun.GunAnimator.SetTrigger("OnFire");
             }
             yield return new WaitForSeconds(reload);
         }

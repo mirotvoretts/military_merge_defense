@@ -26,7 +26,7 @@ public class AdvertSystem : MonoBehaviour
         ShowAdv();
     }
 
-    public static void AdvertEnded()
+    public void AdvertEnded()
     {
         OnAdvertEnded?.Invoke();
     }

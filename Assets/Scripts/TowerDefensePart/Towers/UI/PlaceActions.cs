@@ -37,7 +37,7 @@ public class PlaceActions : MonoBehaviour
             if (_currentPlace != null)
             {
                 bool hasTower = _currentPlace.Tower != null;
-                _buildButton.IsUsable = hasTower && Score.BuyAvailable(_price);
+                _buildButton.IsUsable = !hasTower && Score.BuyAvailable(_price);
             }
         };
     }
