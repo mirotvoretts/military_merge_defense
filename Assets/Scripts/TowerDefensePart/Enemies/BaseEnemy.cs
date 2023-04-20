@@ -9,7 +9,7 @@ public abstract class BaseEnemy : MonoBehaviour
     [SerializeField] protected Image HealthBar;
 
 
-    protected const float MaxSpeed = 25;
+    protected const float MaxSpeed = 12;
     [SerializeField] protected float BasicSpeed = 1f;
     [SerializeField] protected float BasicHealth = 10f;
     [HideInInspector]public float Speed;

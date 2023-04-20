@@ -4,7 +4,7 @@ public class LightEnemy : BaseEnemy
 {
     public override void UpdateStats()
     {
-        Speed = Mathf.Clamp(BasicSpeed + WaveSystem.Wave * 0.5f, 0, MaxSpeed);
+        Speed = Mathf.Clamp(BasicSpeed + WaveSystem.Wave * 0.3f, 0, MaxSpeed);
         Health = BasicHealth + WaveSystem.Wave * 2f;
     }
 

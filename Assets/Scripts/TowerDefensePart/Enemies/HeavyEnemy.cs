@@ -4,7 +4,7 @@ public class HeavyEnemy : BaseEnemy
 {
     public override void UpdateStats()
     {
-        Speed = Mathf.Clamp(BasicSpeed + WaveSystem.Wave * 0.2f, 0, MaxSpeed - 10);
+        Speed = Mathf.Clamp(BasicSpeed + WaveSystem.Wave * 0.2f, 0, MaxSpeed - 7);
         Health = BasicHealth + WaveSystem.Wave * 4f;
     }
 
