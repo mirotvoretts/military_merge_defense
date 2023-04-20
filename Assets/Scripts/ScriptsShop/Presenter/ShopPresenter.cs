@@ -19,6 +19,7 @@ public class ShopPresenter : IPresenter
     public void Enable()
     {
         _enemyFactory.OnEnemySpawned += ListenEnemyDeath;
+        WaveSystem.OnWaveChanged += GiveRandomMaterial;
     }
     
     private void ListenEnemyDeath(BaseEnemy enemy)
@@ -46,5 +47,13 @@ public class ShopPresenter : IPresenter
     public void Disable()
     {
         _enemyFactory.OnEnemySpawned -= ListenEnemyDeath;
+    }
+
+    private void GiveRandomMaterial()
+    {
+        for (int i = 0; i < Random.Range(2, Mathf.Clamp(WaveSystem.Wave, 2, 12)); i++)
+        {
+            _model.PushToInventory(GetRandomMaterial());
+        }
     }
 }

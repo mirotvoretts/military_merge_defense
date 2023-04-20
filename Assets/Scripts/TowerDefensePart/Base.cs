@@ -31,8 +31,15 @@ public class Base : MonoBehaviour
         _healthBar.fillAmount = _health / (float)_maxHealth;
         if(_health <= 0)
         {
-            AdvertSystem.OnAdvertEnded += () => SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-            AdvertSystem.ShowAdvert();
+            try
+            {
+                AdvertSystem.OnAdvertEnded += () => SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+                AdvertSystem.ShowAdvert();
+            }
+            catch
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            }
         }
     }
 }

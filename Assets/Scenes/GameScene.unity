@@ -14613,7 +14613,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _enemyFactory: {fileID: 403140987}
   _label: {fileID: 888810417}
-  _startMoney: 175
+  _startMoney: 600
 --- !u!1001 &2021478228
 PrefabInstance:
   m_ObjectHideFlags: 0
