@@ -31,7 +31,7 @@ public class ShopPresenter : IPresenter
 
     private void OnEnemyDied()
     {
-        if(Random.Range(0,100) < Mathf.Clamp(25 + WaveSystem.Wave, 10, 50))
+        if(Random.Range(0,100) < Mathf.Clamp(25 + WaveSystem.Wave, 25, 60))
             _model.PushToInventory(GetRandomMaterial());
     }
 

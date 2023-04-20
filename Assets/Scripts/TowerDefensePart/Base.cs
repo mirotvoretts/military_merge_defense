@@ -24,9 +24,15 @@ public class Base : MonoBehaviour
 
     private void TakeDamage()
     {
+        if (_health <= 0)
+            return;
+
         _health--;
         _healthBar.fillAmount = _health / (float)_maxHealth;
         if(_health <= 0)
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        {
+            AdvertSystem.OnAdvertEnded += () => SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            AdvertSystem.ShowAdvert();
+        }
     }
 }

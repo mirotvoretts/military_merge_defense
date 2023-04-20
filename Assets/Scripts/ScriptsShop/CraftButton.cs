@@ -9,7 +9,7 @@ public class CraftButton : MonoBehaviour
     private NoticeUIView _notice;
     private bool _anyProductWasCrafted;
 
-    private void Awake()
+    private void Start()
     {
         _notice = NoticeUIView.Instance;
     }
@@ -17,7 +17,6 @@ public class CraftButton : MonoBehaviour
     public void TryCraftRequestedProduct()
     {
         var firstClient = QueueOfClients.Peek();
-
         if (firstClient == null)
         {
             _notice.Show("Очередь пуста!");

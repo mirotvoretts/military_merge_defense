@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Materials Data
   m_EditorClassIdentifier: 
   _sequence:
-  - {fileID: 11400000, guid: 76147ef8101035b4fa748d66889d97b8, type: 2}
   - {fileID: 11400000, guid: 04fff60882451554db236abce5b99ec7, type: 2}
+  - {fileID: 11400000, guid: 76147ef8101035b4fa748d66889d97b8, type: 2}
   - {fileID: 11400000, guid: 8bf7a66f054315f4fb7c5f8ac2d596bf, type: 2}

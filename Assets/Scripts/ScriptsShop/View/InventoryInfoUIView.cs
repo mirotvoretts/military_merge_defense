@@ -19,7 +19,7 @@ public class InventoryInfoUIView : UIView
     private readonly List<Sprite> _productsIcons = new();
     private readonly List<Sprite> _materialsIcons = new();
 
-    private void Awake()
+    private void Start()
     {
         Show();
         DisplayItemsIcons();

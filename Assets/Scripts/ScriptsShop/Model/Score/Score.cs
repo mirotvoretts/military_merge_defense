@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Score : MonoBehaviour
 {
+    [SerializeField] private EnemyFactory _enemyFactory;
     [SerializeField] private TextMeshProUGUI _label;
     [SerializeField] private int _startMoney = 0;
     public static int Value { get; private set; }
@@ -19,7 +20,17 @@ public class Score : MonoBehaviour
     {
         Value = _startMoney;
         UpdateLabel();
+        _enemyFactory.OnEnemySpawned += ListenEnemyDeath;
     }
+
+    private void ListenEnemyDeath(BaseEnemy enemy)
+    {
+        enemy.OnDied += (enemy) =>
+        {
+            AddRandomMoney();
+        };
+    }
+
 
     private void UpdateLabel()
     {
@@ -51,5 +62,11 @@ public class Score : MonoBehaviour
     private void OnDestroy()
     {
         ValueChanged -= UpdateLabel;
+    }
+
+    private void AddRandomMoney()
+    {
+        Value = Value + UnityEngine.Random.Range(1, 10 + WaveSystem.Wave);
+        ValueChanged?.Invoke();
     }
 }
