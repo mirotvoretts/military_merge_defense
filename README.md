@@ -1,4 +1,4 @@
-# Millitary Merge Defense
+# Military Merge Defense
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/yourusername/your-repo/blob/main/LICENSE)
 ![Status](https://img.shields.io/badge/status-development%20stopped-red)
